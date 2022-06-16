@@ -50,9 +50,10 @@
             this.registerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(232, 417);
+            this.registerButton.Location = new System.Drawing.Point(54, 306);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(200, 36);
+            this.registerButton.Size = new System.Drawing.Size(150, 29);
             this.registerButton.TabIndex = 0;
             this.registerButton.Text = "Register";
             this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
@@ -68,12 +69,13 @@
             this.userNameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.userNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.userNameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userNameTextBox.Location = new System.Drawing.Point(232, 29);
+            this.userNameTextBox.Location = new System.Drawing.Point(174, 24);
+            this.userNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.userNameTextBox.Name = "userNameTextBox";
             this.userNameTextBox.PasswordChar = '\0';
             this.userNameTextBox.PlaceholderText = "";
             this.userNameTextBox.SelectedText = "";
-            this.userNameTextBox.Size = new System.Drawing.Size(200, 36);
+            this.userNameTextBox.Size = new System.Drawing.Size(150, 29);
             this.userNameTextBox.TabIndex = 1;
             // 
             // passwordTextBox
@@ -87,21 +89,23 @@
             this.passwordTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.passwordTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.passwordTextBox.Location = new System.Drawing.Point(232, 98);
+            this.passwordTextBox.Location = new System.Drawing.Point(174, 80);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '\0';
             this.passwordTextBox.PlaceholderText = "";
             this.passwordTextBox.SelectedText = "";
-            this.passwordTextBox.Size = new System.Drawing.Size(200, 36);
+            this.passwordTextBox.Size = new System.Drawing.Size(150, 29);
             this.passwordTextBox.TabIndex = 2;
             // 
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(34, 98);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(26, 80);
+            this.guna2HtmlLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(82, 22);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(66, 18);
             this.guna2HtmlLabel1.TabIndex = 6;
             this.guna2HtmlLabel1.Text = "Password: ";
             // 
@@ -109,9 +113,10 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(36, 162);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(27, 132);
+            this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(42, 22);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(35, 18);
             this.guna2HtmlLabel2.TabIndex = 7;
             this.guna2HtmlLabel2.Text = "Role:";
             // 
@@ -119,9 +124,10 @@
             // 
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(36, 231);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(27, 188);
+            this.guna2HtmlLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(57, 22);
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(46, 18);
             this.guna2HtmlLabel3.TabIndex = 8;
             this.guna2HtmlLabel3.Text = "Faculty";
             // 
@@ -129,9 +135,10 @@
             // 
             this.classId.BackColor = System.Drawing.Color.Transparent;
             this.classId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.classId.Location = new System.Drawing.Point(32, 312);
+            this.classId.Location = new System.Drawing.Point(24, 254);
+            this.classId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classId.Name = "classId";
-            this.classId.Size = new System.Drawing.Size(84, 22);
+            this.classId.Size = new System.Drawing.Size(68, 18);
             this.classId.TabIndex = 11;
             this.classId.Text = "Classroom";
             // 
@@ -143,9 +150,10 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(564, 177);
+            this.guna2Button2.Location = new System.Drawing.Point(359, 306);
+            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button2.Size = new System.Drawing.Size(150, 29);
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Choose File";
             // 
@@ -159,18 +167,20 @@
             this.roleCombobox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.roleCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.roleCombobox.ItemHeight = 30;
-            this.roleCombobox.Location = new System.Drawing.Point(232, 162);
+            this.roleCombobox.Location = new System.Drawing.Point(174, 132);
+            this.roleCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.roleCombobox.Name = "roleCombobox";
-            this.roleCombobox.Size = new System.Drawing.Size(200, 36);
+            this.roleCombobox.Size = new System.Drawing.Size(151, 36);
             this.roleCombobox.TabIndex = 14;
             // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(34, 43);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(26, 35);
+            this.guna2HtmlLabel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 22);
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(43, 18);
             this.guna2HtmlLabel4.TabIndex = 15;
             this.guna2HtmlLabel4.Text = "UserId";
             // 
@@ -184,9 +194,10 @@
             this.facultyComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.facultyComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.facultyComboBox.ItemHeight = 30;
-            this.facultyComboBox.Location = new System.Drawing.Point(232, 231);
+            this.facultyComboBox.Location = new System.Drawing.Point(174, 188);
+            this.facultyComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.facultyComboBox.Name = "facultyComboBox";
-            this.facultyComboBox.Size = new System.Drawing.Size(200, 36);
+            this.facultyComboBox.Size = new System.Drawing.Size(151, 36);
             this.facultyComboBox.TabIndex = 17;
             this.facultyComboBox.SelectedIndexChanged += new System.EventHandler(this.facultyComboBox_SelectedIndexChanged);
             // 
@@ -200,16 +211,17 @@
             this.classroomComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.classroomComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.classroomComboBox.ItemHeight = 30;
-            this.classroomComboBox.Location = new System.Drawing.Point(232, 294);
+            this.classroomComboBox.Location = new System.Drawing.Point(174, 239);
+            this.classroomComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.classroomComboBox.Name = "classroomComboBox";
-            this.classroomComboBox.Size = new System.Drawing.Size(200, 36);
+            this.classroomComboBox.Size = new System.Drawing.Size(151, 36);
             this.classroomComboBox.TabIndex = 18;
             // 
             // registerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(552, 366);
             this.Controls.Add(this.classroomComboBox);
             this.Controls.Add(this.facultyComboBox);
             this.Controls.Add(this.guna2HtmlLabel4);
@@ -222,6 +234,7 @@
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.registerButton);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "registerForm";
             this.Text = "registerForm";
             this.Load += new System.EventHandler(this.registerForm_Load);
