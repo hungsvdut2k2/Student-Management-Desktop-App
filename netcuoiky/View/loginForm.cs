@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using netcuoiky.BLL;
+using netcuoiky.DTO;
 
 namespace netcuoiky
 {
@@ -20,14 +22,29 @@ namespace netcuoiky
             instance = this;
         }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        private void signInButton_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void guna2ControlBox1_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            string Username = userNameTextBox.Text;
+            string Password = passwordTextBox.Text;
+            Account loginAccount = Account_BLL.Instance.Login(Username, Password);
+            if (loginAccount != null)
+            {
+                if (loginAccount.role == "Admin")
+                {
+                    this.Hide();
+                    new adminForm().ShowDialog();
+                }
+                else if(loginAccount.role == "Student")
+                {
+                    userId = loginAccount.userId;
+                    this.Hide();
+                    new userForm().ShowDialog();
+                }
+                else
+                {
+                    
+                }
+            }
         }
     }
 }
