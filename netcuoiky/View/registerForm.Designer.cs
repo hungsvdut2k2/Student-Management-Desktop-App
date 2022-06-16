@@ -31,7 +31,6 @@
             this.registerButton = new Guna.UI2.WinForms.Guna2Button();
             this.userNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.passwordTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.gunaTextBox1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,7 +38,6 @@
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.roleCombobox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.userIdTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.facultyComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.classroomComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SuspendLayout();
@@ -96,16 +94,6 @@
             this.passwordTextBox.SelectedText = "";
             this.passwordTextBox.Size = new System.Drawing.Size(200, 36);
             this.passwordTextBox.TabIndex = 2;
-            // 
-            // gunaTextBox1
-            // 
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(32, 43);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.Size = new System.Drawing.Size(85, 22);
-            this.gunaTextBox1.TabIndex = 5;
-            this.gunaTextBox1.Text = "Username: ";
             // 
             // guna2HtmlLabel1
             // 
@@ -180,30 +168,11 @@
             // 
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(36, 379);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(34, 43);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(52, 22);
             this.guna2HtmlLabel4.TabIndex = 15;
             this.guna2HtmlLabel4.Text = "UserId";
-            // 
-            // userIdTextBox
-            // 
-            this.userIdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.userIdTextBox.DefaultText = "";
-            this.userIdTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.userIdTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.userIdTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.userIdTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.userIdTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userIdTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.userIdTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userIdTextBox.Location = new System.Drawing.Point(232, 365);
-            this.userIdTextBox.Name = "userIdTextBox";
-            this.userIdTextBox.PasswordChar = '\0';
-            this.userIdTextBox.PlaceholderText = "";
-            this.userIdTextBox.SelectedText = "";
-            this.userIdTextBox.Size = new System.Drawing.Size(200, 36);
-            this.userIdTextBox.TabIndex = 16;
             // 
             // facultyComboBox
             // 
@@ -243,7 +212,6 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.classroomComboBox);
             this.Controls.Add(this.facultyComboBox);
-            this.Controls.Add(this.userIdTextBox);
             this.Controls.Add(this.guna2HtmlLabel4);
             this.Controls.Add(this.roleCombobox);
             this.Controls.Add(this.guna2Button2);
@@ -251,7 +219,6 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2HtmlLabel2);
             this.Controls.Add(this.guna2HtmlLabel1);
-            this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.userNameTextBox);
             this.Controls.Add(this.registerButton);
@@ -268,7 +235,6 @@
         private Guna.UI2.WinForms.Guna2Button registerButton;
         private Guna.UI2.WinForms.Guna2TextBox userNameTextBox;
         private Guna.UI2.WinForms.Guna2TextBox passwordTextBox;
-        private Guna.UI2.WinForms.Guna2HtmlLabel gunaTextBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
@@ -276,7 +242,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2ComboBox roleCombobox;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox userIdTextBox;
         private Guna.UI2.WinForms.Guna2ComboBox facultyComboBox;
         private Guna.UI2.WinForms.Guna2ComboBox classroomComboBox;
     }

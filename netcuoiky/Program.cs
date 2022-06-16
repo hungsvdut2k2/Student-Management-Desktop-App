@@ -16,7 +16,7 @@ namespace netcuoiky
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adminForm());
+            Application.Run(new loginForm());
         }
     }
 }

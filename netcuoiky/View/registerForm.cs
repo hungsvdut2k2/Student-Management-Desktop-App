@@ -37,12 +37,14 @@ namespace netcuoiky
             string username = userNameTextBox.Text;
             string password = passwordTextBox.Text;
             string role = roleCombobox.SelectedItem.ToString();
-            string userId = userIdTextBox.Text;
+            string userId = userNameTextBox.Text;
             string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyComboBox.SelectedIndex + 1].facultyId;
             int seletectedIndex = classroomComboBox.SelectedIndex;
             string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex].Value);
             Account_BLL.Instance.Register(username, password, role, userId, classroomId);
             MessageBox.Show("Dang Ky Thanh Cong");
+            this.Dispose();
+            new adminForm().ShowDialog();
         }
 
         private void facultyComboBox_SelectedIndexChanged(object sender, EventArgs e)
