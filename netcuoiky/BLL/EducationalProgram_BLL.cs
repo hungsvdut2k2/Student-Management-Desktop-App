@@ -27,13 +27,12 @@ namespace netcuoiky.BLL
             private set {}
         }
 
-        public List<Course> GetAllCourseInEducationalProgram(string educationalProgramId)
+        public List<ReturnedCourse> GetAllCourseInEducationalProgram(string educationalProgramId)
         {
             List<CourseEducationalProgram> courseEducational =
                 _context.CourseEducationalProgram.Where(w => 
                     w.EducationalProgramId == educationalProgramId).ToList();
             List<ReturnedCourse> courseList = new List<ReturnedCourse>();
-            List<Course> courses = new List<Course>();
             foreach (var item in courseEducational)
             {
                 Course course = _context.Course.Find(item.CourseId);
@@ -44,10 +43,9 @@ namespace netcuoiky.BLL
                     Semester = item.Semester
                 };
                 courseList.Add(res);
-                courses.Add(course);
             }
 
-            return courses;
+            return courseList;
         }
     }
 }
