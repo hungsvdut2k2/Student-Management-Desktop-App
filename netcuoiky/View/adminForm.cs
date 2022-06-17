@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using netcuoiky.BLL;
 
 namespace netcuoiky
 {
@@ -18,6 +19,13 @@ namespace netcuoiky
         {
             InitializeComponent();
             instance = this;
+            SetComboBox();
+        }
+
+        private void SetComboBox()
+        {
+            facultyCombobox.Items.AddRange(Faculty_BLL.Instance.GetComboBoxItems().ToArray());
+            classroomCombobox.Items.Add("Tất Cả Lớp");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -61,8 +69,30 @@ namespace netcuoiky
             new registerForm().Show();
         }
 
-        private void guna2Button1_Click_1(object sender, EventArgs e)
+
+        private void facultyCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyCombobox.SelectedIndex + 1].facultyId;
+            classroomCombobox.Items.AddRange(Classroom_BLL.Instance.GetClassByFaculty(facultyId).ToArray());
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyCombobox.SelectedIndex + 1].facultyId;
+            if (classroomCombobox.SelectedIndex != 0)
+            {
+                int seletectedIndex = classroomCombobox.SelectedIndex;
+                string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex - 1].Value);
+                userDataGridView.DataSource = User_BLL.Instance.GetAllUserInClass(classroomId);
+            }
+            else
+            {
+                userDataGridView.DataSource = User_BLL.Instance.GetAllUserInFaculty(facultyId);
+            }
+            for (int i = 5; i < userDataGridView.ColumnCount; i++)
+            {
+                userDataGridView.Columns[i].Visible = false;
+            }
         }
     }
 }

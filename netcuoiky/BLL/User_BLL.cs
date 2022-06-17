@@ -29,11 +29,22 @@ namespace netcuoiky.BLL
             User user = _context.User.Find(userdId);
             return user;
         }
-        public List<User> GetAllUserInClass(string userId)
+        public List<User> GetAllUserInClass(string classId)
         {
-            User user = GetUser(userId);
-            List<User> users = _context.User.Where(w => w.classId == user.classId).ToList();
+            List<User> users = _context.User.Where(w => w.classId == classId).ToList();
             return users;
+        }
+
+        public List<User> GetAllUserInFaculty(string facultyId)
+        {
+            List<Classroom> classrooms = _context.Classroom.Where(w => w.facultyId == facultyId).ToList();
+            List<User> resList = new List<User>();
+            foreach (var classroom in classrooms)
+            {
+                List<User> users = _context.User.Where(w => w.classId == classroom.classId).ToList();
+                resList.AddRange(users);
+            }
+            return resList;
         }
     }
 }

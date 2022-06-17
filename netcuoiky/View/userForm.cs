@@ -65,7 +65,8 @@ namespace netcuoiky
         private void SetDataSourceForClassroom()
         {
             string userId = loginForm.instance.userId;
-            classroomDataGridView.DataSource = User_BLL.Instance.GetAllUserInClass(userId);
+            User user = User_BLL.Instance.GetUser(userId);
+            classroomDataGridView.DataSource = User_BLL.Instance.GetAllUserInClass(user.classId);
             for (int i = 5; i < classroomDataGridView.ColumnCount; i++)
             {
                 classroomDataGridView.Columns[i].Visible = false;
@@ -76,10 +77,11 @@ namespace netcuoiky
         {
             string userId = loginForm.instance.userId;
             scoreDataGridView.DataSource = Score_BLL.Instance.GetAllScoreOfStudent(userId);
-            for (int i = 2; i < scoreDataGridView.ColumnCount - 1; i++)
+            for (int i = 2; i < scoreDataGridView.ColumnCount - 2; i++)
             {
                 scoreDataGridView.Columns[i].Width = 60;
             }
+            scoreDataGridView.Columns[scoreDataGridView.ColumnCount - 1].Width = 60;
         }
 
         private void SetDataSourceForEducationalProgram()

@@ -41,7 +41,8 @@ namespace netcuoiky.BLL
                     midTermScore = score.midTermScore,
                     finalTermScore = score.finalTermScore,
                     courseScoreRate =
-                        $"{score.excerciseRate} * BT + {score.midTermRate} * GK + {score.finalTermRate} * CK "
+                        $"{score.excerciseRate} * BT + {score.midTermRate} * GK + {score.finalTermRate} * CK ",
+                    averageScore = score.calScore()
                 };
                 resList.Add(item);
             }

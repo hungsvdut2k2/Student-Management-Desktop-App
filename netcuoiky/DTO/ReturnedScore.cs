@@ -22,5 +22,7 @@ namespace netcuoiky.DTO
         public double finalTermScore { get; set; }
         [System.ComponentModel.DisplayName("Tỉ Lệ")]
         public string courseScoreRate { get; set; }
+        [System.ComponentModel.DisplayName("Tổng kết")]
+        public double averageScore { get; set; }
     }
 }
