@@ -61,7 +61,10 @@
   <ItemGroup>
     <Compile Include="BLL\Account_BLL.cs" />
     <Compile Include="BLL\Classroom_BLL.cs" />
+    <Compile Include="BLL\EducationalProgram_BLL.cs" />
     <Compile Include="BLL\Faculty_BLL.cs" />
+    <Compile Include="BLL\Score_BLL.cs" />
+    <Compile Include="BLL\User_BLL.cs" />
     <Compile Include="DAL\SM_DAL.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Classroom.cs" />
@@ -71,12 +74,26 @@
     <Compile Include="DTO\CourseEducationalProgram.cs" />
     <Compile Include="DTO\EducationalProgram.cs" />
     <Compile Include="DTO\Faculty.cs" />
+    <Compile Include="DTO\ReturnedCourse.cs" />
+    <Compile Include="DTO\ReturnedScore.cs" />
     <Compile Include="DTO\Score.cs" />
     <Compile Include="DTO\User.cs" />
     <Compile Include="DTO\UserCourseClassroom.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.designer.cs">
       <DependentUpon>202206161205037_addDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206170352281_configCourseTable.cs" />
+    <Compile Include="Migrations\202206170352281_configCourseTable.designer.cs">
+      <DependentUpon>202206170352281_configCourseTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206170355584_configCourseClassroomTable.cs" />
+    <Compile Include="Migrations\202206170355584_configCourseClassroomTable.designer.cs">
+      <DependentUpon>202206170355584_configCourseClassroomTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206170427147_addOneMoreColumnToTable.cs" />
+    <Compile Include="Migrations\202206170427147_addOneMoreColumnToTable.designer.cs">
+      <DependentUpon>202206170427147_addOneMoreColumnToTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="View\updateForm.cs">
@@ -119,6 +136,15 @@
     </Compile>
     <EmbeddedResource Include="Migrations\202206161205037_addDatabase.resx">
       <DependentUpon>202206161205037_addDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206170352281_configCourseTable.resx">
+      <DependentUpon>202206170352281_configCourseTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206170355584_configCourseClassroomTable.resx">
+      <DependentUpon>202206170355584_configCourseClassroomTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202206170427147_addOneMoreColumnToTable.resx">
+      <DependentUpon>202206170427147_addOneMoreColumnToTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\settingForm.resx">
       <DependentUpon>settingForm.cs</DependentUpon>

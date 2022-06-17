@@ -10,10 +10,15 @@ namespace netcuoiky.DTO
     public class User
     {
         [Key]
+        [System.ComponentModel.DisplayName("MSSV")]
         public string userId { get; set; }
+        [System.ComponentModel.DisplayName("Họ Và Tên")]
         public string name { get; set; }
+        [System.ComponentModel.DisplayName("Dân Tộc")]
         public string nation { get; set; }
+        [System.ComponentModel.DisplayName("Giới Tính")]
         public bool gender { get; set; }
+        [System.ComponentModel.DisplayName("Ngày Sinh")]
         public string dob { get; set; }
         public string birthPlace { get; set; }
         public string personalId { get; set; }

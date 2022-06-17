@@ -12,6 +12,6 @@ namespace netcuoiky.DTO
         [Key]
         public string courseId { get; set; }
         public string name { get; set; }
-        public string teacherName { get; set; }
+        public int Credits { get; set; }
     }
 }

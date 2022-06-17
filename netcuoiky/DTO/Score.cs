@@ -18,7 +18,6 @@ namespace netcuoiky.DTO
         public double finalTermScore { get; set; }
         public double excerciseRate { get; set; }
         public double midTermRate { get; set; }
-
         public double finalTermRate { get; set; }
         public double calScore()
         {

@@ -12,5 +12,6 @@ namespace netcuoiky.DTO
         public string CourseId { get; set; }
         public EducationalProgram EducationalProgram { get; set; }
         public  string EducationalProgramId { get; set; }
+        public int Semester { get; set; }
     }
 }

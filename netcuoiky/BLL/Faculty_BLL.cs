@@ -26,6 +26,11 @@ namespace netcuoiky.BLL
             private set {}
         }
 
+        public Faculty GetFacultyById(string facultyId)
+        {
+            Faculty faculty = _context.Faculty.Find(facultyId);
+            return faculty;
+        }
         public List<Faculty> GetAllFaculties()
         {
             List<Faculty> faculties = _context.Faculty.ToList();

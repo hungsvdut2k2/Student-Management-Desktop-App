@@ -25,6 +25,12 @@ namespace netcuoiky.BLL
             private set { }
         }
 
+        public Classroom GetClassroomById(string ClassId)
+        {
+            Classroom classroom = _context.Classroom.Find(ClassId);
+            return classroom;
+        }
+
         public List<ComboboxItem> GetClassByFaculty(string facultyId)
         {
             List<Classroom> classes = _context.Classroom.Where(w => w.facultyId == facultyId).ToList();
