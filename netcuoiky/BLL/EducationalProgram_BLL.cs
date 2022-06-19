@@ -47,5 +47,25 @@ namespace netcuoiky.BLL
 
             return courseList;
         }
+
+        public List<ComboboxItem> GetAllEducationalProgram()
+        {
+            List<EducationalProgram> educationalPrograms = _context.EducationalProgram.ToList();
+            List<ComboboxItem> data = new List<ComboboxItem>();
+            foreach (var educationalProgram in educationalPrograms)
+            {
+                if (educationalProgram.EducationalProgramName != "Admin")
+                {
+                    var item = new ComboboxItem
+                    {
+                        Text = educationalProgram.EducationalProgramName,
+                        Value = educationalProgram.EducationalProgramId
+                    };
+                    data.Add(item);
+                }
+                
+            }
+            return data;
+        }
     }
 }

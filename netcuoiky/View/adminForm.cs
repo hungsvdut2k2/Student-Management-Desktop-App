@@ -15,74 +15,47 @@ namespace netcuoiky
     {
         public static adminForm instance;
         private bool isCollapsed = true;
+
         public adminForm()
         {
             InitializeComponent();
             instance = this;
-            SetComboBox();
+            SetFacultyCombobox();
+            SetEducationalProgramCombobox();
+            SetCourseCombobox();
         }
 
-        private void SetComboBox()
+        private void SetFacultyCombobox()
         {
             facultyCombobox.Items.AddRange(Faculty_BLL.Instance.GetComboBoxItems().ToArray());
-            classroomCombobox.Items.Add("Tất Cả Lớp");
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void SetEducationalProgramCombobox()
         {
-            if (isCollapsed == true)
-            {
-                panelDrop.Height += 10;
-                if(B1.BorderRadius >= 0) { B1.BorderRadius -= 5; }
-                if(panelDrop.Size == panelDrop.MaximumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = false;
-                }
-            }
-            else
-            {
-                panelDrop.Height -= 10;
-                if (B1.BorderRadius <= 15) { B1.BorderRadius += 5; }
-                if (panelDrop.Size == panelDrop.MinimumSize)
-                {
-                    timer1.Stop();
-                    isCollapsed = true;
-                }
-            }
+            educationalProgramCombobox.Items.AddRange(EducationalProgram_BLL.Instance.GetAllEducationalProgram().ToArray());
         }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
+        private void SetCourseCombobox()
         {
-            timer1.Start();
+            courseCombobox.Items.AddRange(Course_BLL.Instance.GetAllCourse().ToArray());
         }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            (new loginForm()).Show();
-        }
-
-        private void addButton_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new registerForm().Show();
-        }
-
-
+        
         private void facultyCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyCombobox.SelectedIndex + 1].facultyId;
-            classroomCombobox.Items.AddRange(Classroom_BLL.Instance.GetClassByFaculty(facultyId).ToArray());
+            if (facultyCombobox.SelectedItem != null)
+            {
+                string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyCombobox.SelectedIndex + 1].facultyId;
+                classroomCombobox.DataSource = Classroom_BLL.Instance.GetClassByFaculty(facultyId).ToArray();
+            }
         }
 
         private void searchButton_Click(object sender, EventArgs e)
         {
             string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyCombobox.SelectedIndex + 1].facultyId;
-            if (classroomCombobox.SelectedIndex != 0)
+            if (classroomCombobox.SelectedItem != null)
             {
                 int seletectedIndex = classroomCombobox.SelectedIndex;
-                string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex - 1].Value);
+                string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex].Value);
                 userDataGridView.DataSource = User_BLL.Instance.GetAllUserInClass(classroomId);
             }
             else
@@ -94,5 +67,37 @@ namespace netcuoiky
                 userDataGridView.Columns[i].Visible = false;
             }
         }
+
+        private void addButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new registerForm().Show();
+        }
+
+        private void searchButton2_Click(object sender, EventArgs e)
+        {
+            string educationProgramId =
+                EducationalProgram_BLL.Instance.GetAllEducationalProgram()[educationalProgramCombobox.SelectedIndex]
+                    .Value.ToString();
+            educationDataGridView.DataSource =
+                EducationalProgram_BLL.Instance.GetAllCourseInEducationalProgram(educationProgramId);
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            (new loginForm()).Show();
+        }
+
+        private void searchButton3_Click(object sender, EventArgs e)
+        {
+            string courseId = Course_BLL.Instance.GetAllCourse()[courseCombobox.SelectedIndex].Value.ToString();
+            courseClassDataGridView.DataSource = CourseClassroom_BLL.Instance.GetAllClassroomOfCourse(courseId);
+            for (int i = 2; i < courseClassDataGridView.Columns.Count; i++)
+            {
+                courseClassDataGridView.Columns[i].Visible = false;
+            }
+        }
+
     }
 }

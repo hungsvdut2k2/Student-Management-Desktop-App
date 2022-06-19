@@ -61,6 +61,8 @@
   <ItemGroup>
     <Compile Include="BLL\Account_BLL.cs" />
     <Compile Include="BLL\Classroom_BLL.cs" />
+    <Compile Include="BLL\CourseClassroom_BLL.cs" />
+    <Compile Include="BLL\Course_BLL.cs" />
     <Compile Include="BLL\EducationalProgram_BLL.cs" />
     <Compile Include="BLL\Faculty_BLL.cs" />
     <Compile Include="BLL\Score_BLL.cs" />
