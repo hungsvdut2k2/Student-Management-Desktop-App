@@ -15,14 +15,14 @@ namespace netcuoiky.DTO
         [System.ComponentModel.DisplayName("Tín Chỉ")]
         public int Credits { get; set; }
         [System.ComponentModel.DisplayName("Điểm Bài Tập")]
-        public double excerciseScore { get; set; }
+        public double? excerciseScore { get; set; }
         [System.ComponentModel.DisplayName("Điểm Giữa Kì")]
-        public double midTermScore { get; set; }
+        public double? midTermScore { get; set; }
         [System.ComponentModel.DisplayName("Điểm Cuối Kì")]
-        public double finalTermScore { get; set; }
+        public double? finalTermScore { get; set; }
         [System.ComponentModel.DisplayName("Tỉ Lệ")]
         public string courseScoreRate { get; set; }
         [System.ComponentModel.DisplayName("Tổng kết")]
-        public double averageScore { get; set; }
+        public double? averageScore { get; set; }
     }
 }

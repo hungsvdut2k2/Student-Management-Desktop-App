@@ -65,6 +65,7 @@
     <Compile Include="BLL\Course_BLL.cs" />
     <Compile Include="BLL\EducationalProgram_BLL.cs" />
     <Compile Include="BLL\Faculty_BLL.cs" />
+    <Compile Include="BLL\Schedule_BLL.cs" />
     <Compile Include="BLL\Score_BLL.cs" />
     <Compile Include="BLL\User_BLL.cs" />
     <Compile Include="DAL\SM_DAL.cs" />
@@ -76,10 +77,13 @@
     <Compile Include="DTO\CourseEducationalProgram.cs" />
     <Compile Include="DTO\EducationalProgram.cs" />
     <Compile Include="DTO\Faculty.cs" />
-    <Compile Include="DTO\ReturnedCourse.cs" />
-    <Compile Include="DTO\ReturnedScore.cs" />
+    <Compile Include="DTO\ReturnedDto\ReturnedCourse.cs" />
+    <Compile Include="DTO\ReturnedDto\ReturnedCourseClassroom.cs" />
+    <Compile Include="DTO\ReturnedDto\ReturnedScore.cs" />
+    <Compile Include="DTO\Schedule.cs" />
     <Compile Include="DTO\Score.cs" />
     <Compile Include="DTO\User.cs" />
+    <Compile Include="DTO\UserCourse.cs" />
     <Compile Include="DTO\UserCourseClassroom.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.designer.cs">
@@ -97,13 +101,15 @@
     <Compile Include="Migrations\202206170427147_addOneMoreColumnToTable.designer.cs">
       <DependentUpon>202206170427147_addOneMoreColumnToTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202206190515170_addScheduleTableAndUserCourseRelationship.cs" />
+    <Compile Include="Migrations\202206190515170_addScheduleTableAndUserCourseRelationship.designer.cs">
+      <DependentUpon>202206190515170_addScheduleTableAndUserCourseRelationship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202206190519216_setNullAbleForScore.cs" />
+    <Compile Include="Migrations\202206190519216_setNullAbleForScore.designer.cs">
+      <DependentUpon>202206190519216_setNullAbleForScore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="View\updateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\updateForm.Designer.cs">
-      <DependentUpon>updateForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="View\adminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +130,11 @@
     <Compile Include="View\registerForm.Designer.cs">
       <DependentUpon>registerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\settingForm.cs">
+    <Compile Include="View\addFormOfAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\settingForm.Designer.cs">
-      <DependentUpon>settingForm.cs</DependentUpon>
+    <Compile Include="View\addFormOfAdmin.Designer.cs">
+      <DependentUpon>addFormOfAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="View\userForm.cs">
       <SubType>Form</SubType>
@@ -148,11 +154,14 @@
     <EmbeddedResource Include="Migrations\202206170427147_addOneMoreColumnToTable.resx">
       <DependentUpon>202206170427147_addOneMoreColumnToTable.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\settingForm.resx">
-      <DependentUpon>settingForm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206190515170_addScheduleTableAndUserCourseRelationship.resx">
+      <DependentUpon>202206190515170_addScheduleTableAndUserCourseRelationship.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\updateForm.resx">
-      <DependentUpon>updateForm.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202206190519216_setNullAbleForScore.resx">
+      <DependentUpon>202206190519216_setNullAbleForScore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\addFormOfAdmin.resx">
+      <DependentUpon>addFormOfAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\adminForm.resx">
       <DependentUpon>adminForm.cs</DependentUpon>

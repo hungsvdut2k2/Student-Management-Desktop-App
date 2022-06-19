@@ -24,6 +24,9 @@ namespace netcuoiky.DAL
             modelBuilder.Entity<CourseEducationalProgram>()
                 .HasKey(courseEducationalProgram => new
                     { courseEducationalProgram.CourseId, courseEducationalProgram.EducationalProgramId });
+            modelBuilder.Entity<UserCourse>()
+                .HasKey(UserCourse => new
+                    { UserCourse.CourseId, UserCourse.UserId });
         }
         public DbSet<Account> Account { get; set; }
         public DbSet<User> User { get; set; }
@@ -35,5 +38,7 @@ namespace netcuoiky.DAL
         public DbSet<Score> Score { get; set; }
         public DbSet<UserCourseClassroom> UserCourseClassroom { get; set; }
         public DbSet<CourseEducationalProgram> CourseEducationalProgram { get; set; }
+        public DbSet<Schedule> Schedule { get; set; }
+        public DbSet<UserCourse> UserCourse { get; set; }
     }
 }

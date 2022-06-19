@@ -14,5 +14,7 @@ namespace netcuoiky.DTO
         public string TeacherName { get; set; }
         public Course course { get; set; }
         public string courseId { get; set; }
+        public List<Schedule> Schedules { get; set; }
+        public bool IsComplete { get; set; }
     }
 }

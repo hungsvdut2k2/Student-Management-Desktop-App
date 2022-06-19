@@ -15,6 +15,7 @@ namespace netcuoiky
     {
         public static adminForm instance;
         private bool isCollapsed = true;
+        public int page = 1;
 
         public adminForm()
         {
@@ -70,8 +71,9 @@ namespace netcuoiky
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            page = 0;
             this.Hide();
-            new registerForm().Show();
+            new addFormOfAdmin().ShowDialog();
         }
 
         private void searchButton2_Click(object sender, EventArgs e)
@@ -93,11 +95,20 @@ namespace netcuoiky
         {
             string courseId = Course_BLL.Instance.GetAllCourse()[courseCombobox.SelectedIndex].Value.ToString();
             courseClassDataGridView.DataSource = CourseClassroom_BLL.Instance.GetAllClassroomOfCourse(courseId);
-            for (int i = 2; i < courseClassDataGridView.Columns.Count; i++)
-            {
-                courseClassDataGridView.Columns[i].Visible = false;
-            }
         }
 
+        private void addButton2_Click(object sender, EventArgs e)
+        {
+            page = 1;
+            this.Hide();
+            new addFormOfAdmin().ShowDialog();
+        }
+
+        private void addButton3_Click(object sender, EventArgs e)
+        {
+            page = 2;
+            this.Hide();
+            new addFormOfAdmin().ShowDialog();
+        }
     }
 }

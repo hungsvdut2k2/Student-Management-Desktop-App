@@ -13,5 +13,6 @@ namespace netcuoiky.DTO
         public string courseId { get; set; }
         public string name { get; set; }
         public int Credits { get; set; }
+        public bool IsAvailable { get; set; }
     }
 }

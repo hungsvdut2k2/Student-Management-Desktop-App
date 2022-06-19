@@ -43,5 +43,17 @@ namespace netcuoiky.BLL
 
             return data;
         }
+
+        public Course GetCourseById(string courseId)
+        {
+            Course course = _context.Course.Find(courseId);
+            return course;
+        }
+
+        public void AddCourse(Course newCourse)
+        {
+            _context.Course.Add(newCourse);
+            _context.SaveChanges();
+        }
     }
 }

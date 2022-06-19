@@ -278,6 +278,7 @@ namespace netcuoiky
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.userDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.userDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.userDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userDataGridView.BackgroundColor = System.Drawing.Color.White;
             this.userDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.userDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -389,6 +390,7 @@ namespace netcuoiky
             this.addButton2.Size = new System.Drawing.Size(180, 36);
             this.addButton2.TabIndex = 11;
             this.addButton2.Text = "Thêm";
+            this.addButton2.Click += new System.EventHandler(this.addButton2_Click);
             // 
             // label1
             // 
@@ -555,6 +557,7 @@ namespace netcuoiky
             this.addButton3.Size = new System.Drawing.Size(180, 36);
             this.addButton3.TabIndex = 15;
             this.addButton3.Text = "Thêm";
+            this.addButton3.Click += new System.EventHandler(this.addButton3_Click);
             // 
             // courseClassDataGridView
             // 

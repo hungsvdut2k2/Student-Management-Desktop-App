@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using netcuoiky.DAL;
 using netcuoiky.DTO;
 
@@ -27,10 +29,38 @@ namespace netcuoiky.BLL
             private set { }
         }
 
-        public List<CourseClassroom> GetAllClassroomOfCourse(string courseId)
+        public List<ReturnedCourseClassroom> GetAllClassroomOfCourse(string courseId)
         {
+            List<ReturnedCourseClassroom> resList = new List<ReturnedCourseClassroom>();
             List<CourseClassroom> courseClassrooms = _context.CourseClassroom.Where(courseClass => courseClass.courseId == courseId).ToList();
-            return courseClassrooms;
+            foreach (var courseClass in courseClassrooms)
+            {
+                var item = new ReturnedCourseClassroom();
+                List<Schedule> schedules = _context.Schedule.Where(w => w.CourseClassId == courseClass.CourseClassId).ToList();
+                foreach (var schedule in schedules)
+                {
+                    item.Schedule +=
+                        $"{schedule.ConvertNumberToDate()} : {schedule.StartPeriod} - {schedule.EndPeriod}  " ;
+                }
+
+                item.CourseClassId = courseClass.CourseClassId;
+                item.TeacherName = courseClass.TeacherName;
+                resList.Add(item);
+            }
+            return resList;
+        }
+
+        public void AddCourseClass(CourseClassroom newCourseClass)
+        {
+            try
+            {
+                _context.CourseClassroom.Add(newCourseClass);
+                _context.SaveChanges();
+            }
+            catch (DbException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }

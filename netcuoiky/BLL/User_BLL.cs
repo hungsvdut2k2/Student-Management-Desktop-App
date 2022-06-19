@@ -46,5 +46,22 @@ namespace netcuoiky.BLL
             }
             return resList;
         }
+
+        public List<ComboboxItem> GetAllUserInCLassComboboxItems(string classId)
+        {
+            List<User> users = _context.User.Where(w => w.classId == classId).ToList();
+            List<ComboboxItem> data = new List<ComboboxItem>();
+            foreach (var user in users)
+            {
+                var item = new ComboboxItem
+                {
+                    Text = user.name,
+                    Value = user.userId
+                };
+                data.Add(item);
+            }
+
+            return data;
+        }
     }
 }
