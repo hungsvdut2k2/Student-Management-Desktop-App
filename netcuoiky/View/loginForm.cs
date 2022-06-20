@@ -42,9 +42,16 @@ namespace netcuoiky
                 }
                 else
                 {
-                    
+                    userId = loginAccount.userId;
+                    this.Hide();
+                    new View.teacherForm().ShowDialog();
                 }
             }
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

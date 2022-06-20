@@ -79,6 +79,7 @@
     <Compile Include="DTO\Faculty.cs" />
     <Compile Include="DTO\ReturnedDto\ReturnedCourse.cs" />
     <Compile Include="DTO\ReturnedDto\ReturnedCourseClassroom.cs" />
+    <Compile Include="DTO\ReturnedDto\ReturnedSchedule.cs" />
     <Compile Include="DTO\ReturnedDto\ReturnedScore.cs" />
     <Compile Include="DTO\Schedule.cs" />
     <Compile Include="DTO\Score.cs" />
@@ -138,6 +139,12 @@
     <Compile Include="View\addFormOfAdmin.Designer.cs">
       <DependentUpon>addFormOfAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\teacherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\teacherForm.Designer.cs">
+      <DependentUpon>teacherForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\userForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +194,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="View\teacherForm.resx">
+      <DependentUpon>teacherForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\userForm.resx">
       <DependentUpon>userForm.cs</DependentUpon>
     </EmbeddedResource>

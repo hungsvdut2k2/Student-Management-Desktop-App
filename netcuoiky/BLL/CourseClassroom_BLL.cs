@@ -69,5 +69,11 @@ namespace netcuoiky.BLL
             _context.CourseClassroom.Remove(courseClassroom);
             _context.SaveChanges();
         }
+
+        public string GetCourseIdByCouresClassId(string courseClassId)
+        {
+            CourseClassroom courseClassroom = _context.CourseClassroom.Where(courseClass => courseClass.CourseClassId == courseClassId).FirstOrDefault();
+            return courseClassroom.courseId;
+        }
     }
 }
