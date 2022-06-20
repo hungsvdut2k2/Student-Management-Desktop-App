@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace netcuoiky.BLL
         public User GetUser(string userdId)
         {
             User user = _context.User.Find(userdId);
+            if( user == null )
+                return null;
             return user;
         }
         public List<User> GetAllUserInClass(string classId)
@@ -62,6 +65,36 @@ namespace netcuoiky.BLL
             }
 
             return data;
+        }
+
+        public void UpdateUser(string userId, User tempUser)
+        {
+            User user = User_BLL.Instance.GetUser(userId);
+            if (user != null)
+            {
+                user.name = tempUser.name;
+                user.birthPlace = tempUser.birthPlace;
+                user.medicalCode = tempUser.medicalCode;
+                user.dob = tempUser.dob;
+                user.phoneNumber = tempUser.phoneNumber;
+                user.personalId = tempUser.personalId;
+                user.nation = tempUser.nation;
+                user.gender = tempUser.gender;
+                user.email = tempUser.email;
+                _context.SaveChanges();
+            }
+            return;
+        }
+
+        public void DeleteUser(string userId)
+        {
+            User user = User_BLL.Instance.GetUser(userId);
+            if (user != null)
+            {
+                _context.User.Remove(user);
+                _context.SaveChanges();
+            }
+            return;
         }
     }
 }

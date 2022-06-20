@@ -24,6 +24,7 @@ namespace netcuoiky.DTO
         public string personalId { get; set; }
         public string medicalCode { get; set; }
         public string phoneNumber { get; set; }
+        public string email { get; set; }
         public Classroom classroom { get; set; }
         public string classId { get; set; }
     }

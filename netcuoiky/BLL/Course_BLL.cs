@@ -55,5 +55,22 @@ namespace netcuoiky.BLL
             _context.Course.Add(newCourse);
             _context.SaveChanges();
         }
+
+        public void UpdateCourse(string courseId, Course tempCourse)
+        {
+            Course course = _context.Course.Find(courseId);
+            course.courseId = tempCourse.courseId;
+            course.name = tempCourse.name;
+            course.Credits = tempCourse.Credits;
+            course.requirementId = tempCourse.requirementId;
+            _context.SaveChangesAsync();
+        }
+        public bool checkCourseExist(string courseId)
+        {
+            Course course = _context.Course.Find(courseId);
+            if(course == null)
+                return false;
+            return true;
+        }
     }
 }

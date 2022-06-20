@@ -189,7 +189,7 @@ namespace netcuoiky
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::netcuoiky.Properties.Resources.Scene_Anime_Wallpapers;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1301, 674);
             this.Controls.Add(this.guna2Panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -215,4 +215,3 @@ namespace netcuoiky
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
     }
 }
-

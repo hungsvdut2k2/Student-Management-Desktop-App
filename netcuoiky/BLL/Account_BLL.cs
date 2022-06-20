@@ -88,5 +88,18 @@ namespace netcuoiky.BLL
                 return computedHash.SequenceEqual(passwordHash);
             }
         }
+
+        public Account GetAccountByUserId(string userId)
+        {
+            Account findingAccount = _context.Account.Where(w => w.userId == userId).FirstOrDefault();
+            return findingAccount;
+        }
+
+        public void DeleteAccount(string userId)
+        {
+            Account findingAccount = _context.Account.Where(w => w.userId == userId).FirstOrDefault();
+            _context.Account.Remove(findingAccount);
+            _context.SaveChanges();
+        }
     }
 }

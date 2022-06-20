@@ -17,10 +17,18 @@ namespace netcuoiky
         public addFormOfAdmin()
         {
             InitializeComponent();
-            SetComboBox();
+            SetTab1ComboBox();
+            SetTab2ComboBox();
+            SetTab3ComboBox();
         }
-
-        private void SetComboBox()
+        public void SetTab1ComboBox()
+        {
+            roleCombobox.Items.Add("Admin");
+            roleCombobox.Items.Add("Teacher");
+            roleCombobox.Items.Add("Student");
+            facultyComboBox2.Items.AddRange(Faculty_BLL.Instance.GetComboBoxItems().ToArray());
+        }
+        private void SetTab3ComboBox()
         {
             CourseComboBox.Items.AddRange(Course_BLL.Instance.GetAllCourse().ToArray());
             facultyComboBox.Items.AddRange(Faculty_BLL.Instance.GetComboBoxItems().ToArray());
@@ -35,6 +43,13 @@ namespace netcuoiky
             {
                 startPeriodComboBox.Items.Add(i);
             }
+        }
+
+        private void SetTab2ComboBox()
+        {
+            availableTextBox.Items.Add("Đã có");
+            availableTextBox.Items.Add("Chưa có");
+
         }
 
         private void addFormOfAdmin_Load(object sender, EventArgs e)
@@ -88,6 +103,84 @@ namespace netcuoiky
             };
             CourseClassroom_BLL.Instance.AddCourseClass(newCourseClass);
             Schedule_BLL.Instance.AddSchedule(newSchedule);
+        }
+
+
+        private void facultyComboBox2_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyComboBox2.SelectedIndex + 1].facultyId;
+            classroomComboBox.Items.AddRange(Classroom_BLL.Instance.GetClassByFaculty(facultyId).ToArray());
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            string username = userNameTextBox.Text;
+            string password = passwordTextBox.Text;
+            string role = roleCombobox.SelectedItem.ToString();
+            string userId = userNameTextBox.Text;
+            string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyComboBox2.SelectedIndex + 1].facultyId;
+            int seletectedIndex = classroomComboBox.SelectedIndex;
+            string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex].Value);
+            Account_BLL.Instance.Register(username, password, role, userId, classroomId);
+            MessageBox.Show("Dang Ky Thanh Cong");
+            this.Dispose();
+            new adminForm().ShowDialog();
+        }
+
+        private void addButton2_Click_1(object sender, EventArgs e)
+        {
+            if (availableTextBox.SelectedIndex == 0)
+            {
+                var courseEducationalProgram = new CourseEducationalProgram
+                {
+                    CourseId = Course_BLL.Instance.GetAllCourse()[courseComboBox2.SelectedIndex].Value.ToString(),
+                    Course = null,
+                    EducationalProgramId =
+                        EducationalProgram_BLL.Instance.GetAllEducationalProgram()[
+                            educationalProgramCombobox.SelectedIndex].Value.ToString(),
+                    EducationalProgram = null,
+                    Semester = Convert.ToInt32(semesterTextBox.Text)
+                };
+                EducationalProgram_BLL.Instance.AddCourseToEducationalProgram(courseEducationalProgram);
+            }
+            else
+            {
+                string courseId = courseIdTextBox.Text;
+                string courseName = courseNameTextBox.Text;
+                int credits = Convert.ToInt32(creditTextBox.Text);
+                var newCourse = new Course
+                {
+                    courseId = courseId,
+                    name = courseName,
+                    Credits = credits,
+                    IsAvailable = true
+                };
+                Course_BLL.Instance.AddCourse(newCourse);
+            }
+        }
+
+        private void availableTextBox_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            if (availableTextBox.SelectedIndex == 0)
+            {
+                courseIdTextBox.Enabled = false;
+                courseNameTextBox.Enabled = false;
+                creditTextBox.Enabled = false;
+                courseComboBox2.Enabled = true;
+                educationalProgramCombobox.Enabled = true;
+                semesterTextBox.Enabled = true;
+                courseComboBox2.DataSource = Course_BLL.Instance.GetAllCourse();
+                educationalProgramCombobox.DataSource = EducationalProgram_BLL.Instance.GetAllEducationalProgram();
+            }
+            else
+            {
+                courseIdTextBox.Enabled = true;
+                courseNameTextBox.Enabled = true;
+                creditTextBox.Enabled = true;
+                courseComboBox2.Enabled = false;
+                educationalProgramCombobox.Enabled = false;
+                semesterTextBox.Enabled = false;
+            }
         }
     }
 }

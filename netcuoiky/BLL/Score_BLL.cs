@@ -48,5 +48,12 @@ namespace netcuoiky.BLL
             }
             return resList;
         }
+
+        public void DeleteScore(string userId)
+        {
+            List<Score> scoreList = _context.Score.Where(score => score.userId == userId).ToList();
+            _context.Score.RemoveRange(scoreList);
+            _context.SaveChanges();
+        }
     }
 }

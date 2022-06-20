@@ -62,5 +62,12 @@ namespace netcuoiky.BLL
                 MessageBox.Show(e.Message);
             }
         }
+
+        public void DeleteCourseClass(string courseClassId)
+        {
+            CourseClassroom courseClassroom = _context.CourseClassroom.Find(courseClassId);
+            _context.CourseClassroom.Remove(courseClassroom);
+            _context.SaveChanges();
+        }
     }
 }

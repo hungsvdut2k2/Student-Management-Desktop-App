@@ -14,5 +14,6 @@ namespace netcuoiky.DTO
         public string name { get; set; }
         public int Credits { get; set; }
         public bool IsAvailable { get; set; }
+        public string requirementId { get; set; }
     }
 }

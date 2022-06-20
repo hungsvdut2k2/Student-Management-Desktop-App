@@ -44,6 +44,7 @@ namespace netcuoiky
             dobTextBox.Text = user.dob;
             phoneNumberTextBox.Text = user.phoneNumber;
             birthPlaceTextBox.Text = user.birthPlace;
+            emailTextBox.Text = user.email;
             if (user.gender)
             {
                 genderComboBox.SelectedIndex = 0;
@@ -90,6 +91,24 @@ namespace netcuoiky
             User user = User_BLL.Instance.GetUser(userId);
             Classroom classroom = Classroom_BLL.Instance.GetClassroomById(user.classId); 
             educationalProgramDataGridView.DataSource = EducationalProgram_BLL.Instance.GetAllCourseInEducationalProgram(classroom.educationalProgramId);
+        }
+
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            string userId = loginForm.instance.userId;
+            User tempUser = new User
+            {
+                name = nameTextBox.Text,
+                birthPlace = birthPlaceTextBox.Text,
+                medicalCode = medicalCodeTextBox.Text,
+                dob = dobTextBox.Text,
+                phoneNumber = phoneNumberTextBox.Text,
+                personalId = personalTextBox.Text,
+                nation = nationComboBox.Text,
+                email = emailTextBox.Text
+            };
+            User_BLL.Instance.UpdateUser(userId, tempUser);
         }
     }
 }

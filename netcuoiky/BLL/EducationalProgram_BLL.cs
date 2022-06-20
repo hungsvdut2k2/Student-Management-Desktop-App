@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using netcuoiky.DAL;
 using netcuoiky.DTO;
 
@@ -38,9 +39,11 @@ namespace netcuoiky.BLL
                 Course course = _context.Course.Find(item.CourseId);
                 ReturnedCourse res = new ReturnedCourse
                 {
+                    courseId = course.courseId,
                     CourseName = course.name,
                     Credits = course.Credits,
-                    Semester = item.Semester
+                    Semester = item.Semester,
+                    requiremnetId = course.requirementId
                 };
                 courseList.Add(res);
             }
@@ -66,6 +69,36 @@ namespace netcuoiky.BLL
                 
             }
             return data;
+        }
+
+        public void AddCourseToEducationalProgram(CourseEducationalProgram item)
+        {
+            try
+            {
+                _context.CourseEducationalProgram.Add(item);
+                _context.SaveChanges();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                throw;
+            }
+        }
+
+        public void DeleteCourseInEducationalProgram(string courseId, string educationalProgramId)
+        {
+            CourseEducationalProgram courseEducationalProgram = _context.CourseEducationalProgram.Where(w =>
+                w.EducationalProgramId == educationalProgramId && w.CourseId == courseId).FirstOrDefault();
+            _context.CourseEducationalProgram.Remove(courseEducationalProgram);
+            _context.SaveChanges();
+        }
+
+        public void UpdateEducationalProgram(string courseId, string educationalProgramId, CourseEducationalProgram temProgram)
+        {
+            CourseEducationalProgram courseEducationalProgram = _context.CourseEducationalProgram.Where(w =>
+                w.EducationalProgramId == educationalProgramId && w.CourseId == courseId).FirstOrDefault();
+            courseEducationalProgram.Semester = temProgram.Semester;
+            _context.SaveChanges();
         }
     }
 }
