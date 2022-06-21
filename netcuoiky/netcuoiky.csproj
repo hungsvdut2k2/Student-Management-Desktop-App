@@ -87,6 +87,7 @@
     <Compile Include="DTO\User.cs" />
     <Compile Include="DTO\UserCourse.cs" />
     <Compile Include="DTO\UserCourseClassroom.cs" />
+    <Compile Include="EmailAccount.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.designer.cs">
       <DependentUpon>202206161205037_addDatabase.cs</DependentUpon>
@@ -125,6 +126,12 @@
     </Compile>
     <Compile Include="View\adminForm.Designer.cs">
       <DependentUpon>adminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\forgotPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\forgotPasswordForm.Designer.cs">
+      <DependentUpon>forgotPasswordForm.cs</DependentUpon>
     </Compile>
     <Compile Include="View\loginForm.cs">
       <SubType>Form</SubType>
@@ -181,6 +188,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\adminForm.resx">
       <DependentUpon>adminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\forgotPasswordForm.resx">
+      <DependentUpon>forgotPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>

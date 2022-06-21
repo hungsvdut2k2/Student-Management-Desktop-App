@@ -25,6 +25,11 @@ namespace netcuoiky.BLL
             private set {}
         }
 
+        public List<User> GetAllUser()
+        {
+            List<User> users = _context.User.ToList();
+            return users;
+        }
         public User GetUser(string userdId)
         {
             User user = _context.User.Find(userdId);
@@ -95,6 +100,19 @@ namespace netcuoiky.BLL
                 _context.SaveChanges();
             }
             return;
+        }
+
+        public bool checkValidMail(string email)
+        {
+            List<User> users = User_BLL.Instance.GetAllUser();
+            foreach (var user in users)
+            {
+                if (user.email == email)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
     }
 }

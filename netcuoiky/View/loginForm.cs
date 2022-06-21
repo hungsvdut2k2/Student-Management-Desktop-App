@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using netcuoiky.BLL;
 using netcuoiky.DTO;
+using netcuoiky.View;
 
 namespace netcuoiky
 {
@@ -51,6 +52,12 @@ namespace netcuoiky
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
+            this.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            new forgotPasswordForm().ShowDialog();
             this.Close();
         }
     }

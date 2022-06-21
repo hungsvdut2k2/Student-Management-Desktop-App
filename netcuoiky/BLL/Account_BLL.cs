@@ -101,5 +101,15 @@ namespace netcuoiky.BLL
             _context.Account.Remove(findingAccount);
             _context.SaveChanges();
         }
+
+        public void ChangePassword(string password, string email)
+        {
+            User user = _context.User.Where(w => w.email == email).FirstOrDefault();
+            Account account = GetAccountByUserId(user.userId);
+            CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
+            account.passwordHash = passwordHash;
+            account.passwordSalt = passwordSalt;
+            _context.SaveChanges();
+        }
     }
 }

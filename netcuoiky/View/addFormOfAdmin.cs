@@ -182,5 +182,11 @@ namespace netcuoiky
                 semesterTextBox.Enabled = false;
             }
         }
+
+        private void backToAdminFormButton_Click(object sender, EventArgs e)
+        {
+            new adminForm().ShowDialog();
+            this.Close();
+        }
     }
 }
