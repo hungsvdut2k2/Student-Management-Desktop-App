@@ -75,5 +75,45 @@ namespace netcuoiky.BLL
             CourseClassroom courseClassroom = _context.CourseClassroom.Where(courseClass => courseClass.CourseClassId == courseClassId).FirstOrDefault();
             return courseClassroom.courseId;
         }
+
+        public List<ReturnedCourseClassroom> GetAllTeacherCourseClassrooms(string teacherName)
+        {
+            List<CourseClassroom> courseClassroomList = _context.CourseClassroom
+                .Where(courseClass => courseClass.TeacherName == teacherName && courseClass.IsComplete == false).ToList();
+            List<ReturnedCourseClassroom> resList = new List<ReturnedCourseClassroom>();
+            foreach (var courseClass in courseClassroomList)
+            {
+                var item = new ReturnedCourseClassroom();
+                List<Schedule> schedules = _context.Schedule.Where(w => w.CourseClassId == courseClass.CourseClassId).ToList();
+                foreach (var schedule in schedules)
+                {
+                    item.Schedule +=
+                        $"{schedule.ConvertNumberToDate()} : {schedule.StartPeriod} - {schedule.EndPeriod}  ";
+                }
+
+                item.CourseClassId = courseClass.CourseClassId;
+                item.TeacherName = courseClass.TeacherName;
+                resList.Add(item);
+            }
+            return resList;
+        }
+
+        public List<ComboboxItem> GetComboboxItems(string teacherName)
+        {
+            List<CourseClassroom> courseClassroomList = _context.CourseClassroom
+                .Where(courseClass => courseClass.TeacherName == teacherName && courseClass.IsComplete == false).ToList();
+            List<ComboboxItem> resList = new List<ComboboxItem>();
+            foreach (var courseClass in courseClassroomList)
+            {
+                var item = new ComboboxItem
+                {
+                    Text = courseClass.CourseClassId,
+                    Value = courseClass.CourseClassId
+                };
+                resList.Add(item);
+            }
+
+            return resList;
+        }
     }
 }

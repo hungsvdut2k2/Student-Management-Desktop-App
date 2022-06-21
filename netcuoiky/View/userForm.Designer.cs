@@ -142,7 +142,7 @@
             this.genderComboBox.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.genderComboBox.Location = new System.Drawing.Point(660, 43);
+            this.genderComboBox.Location = new System.Drawing.Point(664, 50);
             this.genderComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(88, 24);

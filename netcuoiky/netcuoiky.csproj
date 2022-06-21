@@ -81,6 +81,7 @@
     <Compile Include="DTO\ReturnedDto\ReturnedCourseClassroom.cs" />
     <Compile Include="DTO\ReturnedDto\ReturnedSchedule.cs" />
     <Compile Include="DTO\ReturnedDto\ReturnedScore.cs" />
+    <Compile Include="DTO\ReturnedDto\ReturnedScoreOfStudent.cs" />
     <Compile Include="DTO\Schedule.cs" />
     <Compile Include="DTO\Score.cs" />
     <Compile Include="DTO\User.cs" />

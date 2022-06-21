@@ -19,22 +19,96 @@ namespace netcuoiky.View
         {
             InitializeComponent();
             instance = this;
+            SetInformation();
             SetDataSourceSchedule();
+            SetCourseClassComboBox();
         }
-        public void SetInformation()
+        private void SetInformation()
         {
             string userId = loginForm.instance.userId;
+            User user = User_BLL.Instance.GetUser(userId);
+            Classroom classroom = Classroom_BLL.Instance.GetClassroomById(user.classId);
+            Faculty faculty = Faculty_BLL.Instance.GetFacultyById(classroom.facultyId);
+            nameTextBox.Text = user.name;
+            nationComboBox.Text = user.nation;
+            if (user.gender)
+            {
+                genderComboBox.Text = "Nam";
+            }
+            else
+            {
+                genderComboBox.Text = "Nữ";
+            }
+
+            dobTextBox.Text = user.dob;
+            birthPlaceTextBox.Text = user.birthPlace;
+            personalIdTextBox.Text = user.personalId;
+            medicalCodeTextBox.Text = user.medicalCode;
+            emailTextBox.Text = user.email;
+            userIdTextBox.Text = user.userId;
+            phoneNumberTextBox.Text = user.phoneNumber;
+            classroomIdTextBox.Text = classroom.name;
+            facultyTextBox.Text = faculty.name;
         }
-        public void SetDataSourceSchedule()
+        private void SetDataSourceSchedule()
         {
             string userId = loginForm.instance.userId;
-            ScheduleDataGridView.DataSource = Schedule_BLL.Instance.GetAllCourseInTheWeek(userId);
+            User user = User_BLL.Instance.GetUser(userId);
+            ScheduleDataGridView.DataSource = CourseClassroom_BLL.Instance.GetAllTeacherCourseClassrooms(user.name);
         }
 
+        private void SetCourseClassComboBox()
+        {
+            string userId = loginForm.instance.userId;
+            User user = User_BLL.Instance.GetUser(userId);
+            courseClassComboBox.DataSource = CourseClassroom_BLL.Instance.GetComboboxItems(user.name);
+        }
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             (new loginForm()).Show();
+        }
+
+        private void updateButton_Click(object sender, EventArgs e)
+        {
+            string userId = loginForm.instance.userId;
+            User tempUser = new User
+            {
+                name = nameTextBox.Text,
+                birthPlace = birthPlaceTextBox.Text,
+                medicalCode = medicalCodeTextBox.Text,
+                dob = dobTextBox.Text,
+                phoneNumber = phoneNumberTextBox.Text,
+                personalId = personalIdTextBox.Text,
+                nation = nationComboBox.Text,
+                email = emailTextBox.Text
+            };
+            User_BLL.Instance.UpdateUser(userId, tempUser);
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string courseClassId = courseClassComboBox.SelectedValue.ToString();
+            scoreDataGridView.DataSource = Score_BLL.Instance.GetScoreOfCourseClass(courseClassId);
+        }
+
+        private void updateButton2_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = scoreDataGridView.SelectedCells[0].RowIndex;
+            DataGridViewRow row = scoreDataGridView.Rows[selectedIndex];
+            string courseClassId = courseClassComboBox.SelectedValue.ToString();
+            string userId = row.Cells[0].Value.ToString();
+            double excerciseScore = Convert.ToDouble(row.Cells[2].Value);
+            double midTermScore = Convert.ToDouble(row.Cells[3].Value);
+            double finalTermScore = Convert.ToDouble(row.Cells[4].Value);
+            Score tempScore = new Score
+            {
+                excerciseScore = excerciseScore,
+                midTermScore = midTermScore,
+                finalTermScore = finalTermScore
+            };
+            Score_BLL.Instance.UpdateScore(userId, courseClassId, tempScore);
+            scoreDataGridView.DataSource = Score_BLL.Instance.GetScoreOfCourseClass(courseClassId);
         }
     }
 }
