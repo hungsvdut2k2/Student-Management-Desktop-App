@@ -32,7 +32,7 @@ namespace netcuoiky.BLL
         public List<ReturnedCourseClassroom> GetAllClassroomOfCourse(string courseId)
         {
             List<ReturnedCourseClassroom> resList = new List<ReturnedCourseClassroom>();
-            List<CourseClassroom> courseClassrooms = _context.CourseClassroom.Where(courseClass => courseClass.courseId == courseId).ToList();
+            List<CourseClassroom> courseClassrooms = _context.CourseClassroom.Where(courseClass => courseClass.courseId == courseId && courseClass.IsComplete == false).ToList();
             foreach (var courseClass in courseClassrooms)
             {
                 var item = new ReturnedCourseClassroom();
@@ -114,6 +114,33 @@ namespace netcuoiky.BLL
             }
 
             return resList;
+        }
+
+        public bool CheckConflictCourseClassroom(string userId, string courseClassId)
+        {
+            List<UserCourseClassroom> userCourseClassrooms =
+                _context.UserCourseClassroom.Where(w => w.UserId == userId).ToList();
+            CourseClassroom findinCourseClassroom = _context.CourseClassroom.Find(courseClassId);
+            List<CourseClassroom> courseClassrooms = new List<CourseClassroom>();
+            foreach (var item in userCourseClassrooms)
+            {
+                CourseClassroom temp = _context.CourseClassroom.Find(item.CourseClassroomId);
+                courseClassrooms.Add(temp);
+            }
+
+            foreach (var courseClassroom in courseClassrooms)
+            {
+                if (findinCourseClassroom.courseId == courseClassroom.courseId)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+        public void AddStudentToCourseClassroom(UserCourseClassroom userCourseClassroom)
+        {
+            _context.UserCourseClassroom.Add(userCourseClassroom);
+            _context.SaveChanges();
         }
     }
 }

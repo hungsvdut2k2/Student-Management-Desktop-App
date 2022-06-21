@@ -22,6 +22,8 @@ namespace netcuoiky
             SetDataSourceForClassroom();
             SetDataSourceForScore();
             SetDataSourceForEducationalProgram();
+            SetDataSourceForCourse();
+            LoadUserImage();
         }
 
 
@@ -93,7 +95,19 @@ namespace netcuoiky
             educationalProgramDataGridView.DataSource = EducationalProgram_BLL.Instance.GetAllCourseInEducationalProgram(classroom.educationalProgramId);
         }
 
+        private void SetDataSourceForCourse()
+        {
+            string userId = loginForm.instance.userId;
+            courseComboBox.DataSource = Course_BLL.Instance.FilterCourseForStudent(userId);
+        }
 
+        private void LoadUserImage()
+        {
+            string userId = loginForm.instance.userId;
+            string folder = userId.Substring(0, 3);
+            Image image1 = Image.FromFile($"E:\\DUT_Image\\{folder}\\{userId}.jpg");
+            userPictureBox.Image = image1;
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             string userId = loginForm.instance.userId;
@@ -109,6 +123,57 @@ namespace netcuoiky
                 email = emailTextBox.Text
             };
             User_BLL.Instance.UpdateUser(userId, tempUser);
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            string userId = loginForm.instance.userId;
+            string courseId = Course_BLL.Instance.FilterCourseForStudent(userId)[courseComboBox.SelectedIndex].Value.ToString();
+            courseClassDataGridView.DataSource = CourseClassroom_BLL.Instance.GetAllClassroomOfCourse(courseId);
+        }
+
+        private void registerButton_Click(object sender, EventArgs e)
+        {
+            int selectedIndex = courseClassDataGridView.SelectedCells[0].RowIndex;
+            DataGridViewRow selectedRow = courseClassDataGridView.Rows[selectedIndex];
+            string courseClassId = selectedRow.Cells[0].Value.ToString();
+            string userId = loginForm.instance.userId;
+            if (CourseClassroom_BLL.Instance.CheckConflictCourseClassroom(userId, courseClassId) == false)
+            {
+                MessageBox.Show("Bạn đã đăng ký lớp học phần thuộc học phần này !!!!");
+            }
+            else
+            {
+                if (Schedule_BLL.Instance.CheckConflictSchedule(userId, courseClassId) == false)
+                {
+                    MessageBox.Show(
+                        "Bạn đã đăng ký lớp học phần trong thời gian này, Vui Lòng chọn lớp học phần khác !!!!");
+                }
+                else
+                {
+                    var newUserCourseClassroom = new UserCourseClassroom
+                    {
+                        UserId = userId,
+                        CourseClassroomId = courseClassId,
+                        User = null,
+                        courseClassroom = null,
+                    };
+                    var newScore = new Score
+                    {
+                        courseClassroom = null,
+                        courseClassroomId = courseClassId,
+                        user = null,
+                        userId = userId,
+                        excerciseRate = 0.2,
+                        midTermRate = 0.2,
+                        finalTermRate = 0.6
+                    };
+                    CourseClassroom_BLL.Instance.AddStudentToCourseClassroom(newUserCourseClassroom);
+                    Score_BLL.Instance.AddScore(newScore);
+                    SetDataSourceForScore();
+                }
+            }
+            
         }
     }
 }

@@ -38,6 +38,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.phoneNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.nationComboBox = new System.Windows.Forms.ComboBox();
@@ -55,7 +58,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.userPictureBox = new Guna.UI2.WinForms.Guna2PictureBox();
             this.classTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -77,9 +80,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.classroomDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.label16 = new System.Windows.Forms.Label();
+            this.registerButton = new Guna.UI2.WinForms.Guna2Button();
+            this.searchButton = new Guna.UI2.WinForms.Guna2Button();
+            this.courseClassDataGridView = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.courseComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.scoreBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.userBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -88,6 +96,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.educationalProgramDataGridView)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classroomDataGridView)).BeginInit();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseClassDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -360,15 +370,16 @@
             this.label1.TabIndex = 22;
             this.label1.Text = "Họ và tên";
             // 
-            // guna2PictureBox1
+            // userPictureBox
             // 
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(23, 26);
-            this.guna2PictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(176, 238);
-            this.guna2PictureBox1.TabIndex = 21;
-            this.guna2PictureBox1.TabStop = false;
+            this.userPictureBox.ImageRotate = 0F;
+            this.userPictureBox.Location = new System.Drawing.Point(23, 26);
+            this.userPictureBox.Margin = new System.Windows.Forms.Padding(4);
+            this.userPictureBox.Name = "userPictureBox";
+            this.userPictureBox.Size = new System.Drawing.Size(176, 238);
+            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.userPictureBox.TabIndex = 21;
+            this.userPictureBox.TabStop = false;
             // 
             // classTextBox
             // 
@@ -480,7 +491,7 @@
             this.tabPage1.Controls.Add(this.classTextBox);
             this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.facultyTextBox);
-            this.tabPage1.Controls.Add(this.guna2PictureBox1);
+            this.tabPage1.Controls.Add(this.userPictureBox);
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.label8);
@@ -861,12 +872,130 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.tabPage5.Controls.Add(this.label16);
+            this.tabPage5.Controls.Add(this.registerButton);
+            this.tabPage5.Controls.Add(this.searchButton);
+            this.tabPage5.Controls.Add(this.courseClassDataGridView);
+            this.tabPage5.Controls.Add(this.courseComboBox);
             this.tabPage5.Location = new System.Drawing.Point(184, 4);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1092, 623);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Đăng ký lớp học phần";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label16.Location = new System.Drawing.Point(25, 62);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(104, 25);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Học Phần:";
+            // 
+            // registerButton
+            // 
+            this.registerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.registerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.registerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.registerButton.ForeColor = System.Drawing.Color.White;
+            this.registerButton.Location = new System.Drawing.Point(873, 309);
+            this.registerButton.Name = "registerButton";
+            this.registerButton.Size = new System.Drawing.Size(180, 45);
+            this.registerButton.TabIndex = 3;
+            this.registerButton.Text = "Đăng Ký";
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
+            // 
+            // searchButton
+            // 
+            this.searchButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.searchButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.searchButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.searchButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchButton.ForeColor = System.Drawing.Color.White;
+            this.searchButton.Location = new System.Drawing.Point(618, 52);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(180, 35);
+            this.searchButton.TabIndex = 2;
+            this.searchButton.Text = "Tìm Kiếm";
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // courseClassDataGridView
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.courseClassDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.courseClassDataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.courseClassDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.courseClassDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.courseClassDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            this.courseClassDataGridView.ColumnHeadersHeight = 4;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.courseClassDataGridView.DefaultCellStyle = dataGridViewCellStyle12;
+            this.courseClassDataGridView.EnableHeadersVisualStyles = false;
+            this.courseClassDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.courseClassDataGridView.Location = new System.Drawing.Point(46, 154);
+            this.courseClassDataGridView.Name = "courseClassDataGridView";
+            this.courseClassDataGridView.RowHeadersVisible = false;
+            this.courseClassDataGridView.RowHeadersWidth = 51;
+            this.courseClassDataGridView.RowTemplate.Height = 24;
+            this.courseClassDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.courseClassDataGridView.Size = new System.Drawing.Size(752, 415);
+            this.courseClassDataGridView.TabIndex = 1;
+            this.courseClassDataGridView.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.courseClassDataGridView.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.courseClassDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.courseClassDataGridView.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.courseClassDataGridView.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.courseClassDataGridView.ThemeStyle.ReadOnly = false;
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.Height = 24;
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.courseClassDataGridView.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // courseComboBox
+            // 
+            this.courseComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.courseComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.courseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.courseComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.courseComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.courseComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.courseComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.courseComboBox.ItemHeight = 30;
+            this.courseComboBox.Location = new System.Drawing.Point(170, 51);
+            this.courseComboBox.Name = "courseComboBox";
+            this.courseComboBox.Size = new System.Drawing.Size(269, 36);
+            this.courseComboBox.TabIndex = 0;
             // 
             // userForm
             // 
@@ -878,7 +1007,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "userForm";
             this.Text = "UserPage";
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -891,6 +1020,9 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.classroomDataGridView)).EndInit();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.courseClassDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.scoreBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.userBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -916,7 +1048,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox nameTextBox;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox userPictureBox;
         private Guna.UI2.WinForms.Guna2TextBox classTextBox;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
@@ -947,5 +1079,10 @@
         private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2TextBox emailTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label16;
+        private Guna.UI2.WinForms.Guna2Button registerButton;
+        private Guna.UI2.WinForms.Guna2Button searchButton;
+        private Guna.UI2.WinForms.Guna2DataGridView courseClassDataGridView;
+        private Guna.UI2.WinForms.Guna2ComboBox courseComboBox;
     }
 }

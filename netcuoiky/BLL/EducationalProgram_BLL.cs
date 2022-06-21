@@ -43,7 +43,8 @@ namespace netcuoiky.BLL
                     CourseName = course.name,
                     Credits = course.Credits,
                     Semester = item.Semester,
-                    requiremnetId = course.requirementId
+                    requiremnetId = course.requirementId,
+                    isAvailable = course.IsAvailable
                 };
                 courseList.Add(res);
             }
@@ -99,6 +100,12 @@ namespace netcuoiky.BLL
                 w.EducationalProgramId == educationalProgramId && w.CourseId == courseId).FirstOrDefault();
             courseEducationalProgram.Semester = temProgram.Semester;
             _context.SaveChanges();
+        }
+
+        public EducationalProgram GetEducationalProgramById(string educationProgramId)
+        {
+            EducationalProgram educationalProgram = _context.EducationalProgram.Find(educationProgramId);
+            return educationalProgram;
         }
     }
 }

@@ -72,5 +72,73 @@ namespace netcuoiky.BLL
                 return false;
             return true;
         }
+
+        public bool checkUncompletedCourse(string userId, string courseId)
+        {
+            UserCourse completedCourse = _context.UserCourse
+                .Where(userCourse => userCourse.CourseId == courseId && userCourse.UserId == userId).FirstOrDefault();
+            if (completedCourse == null)
+                return true;
+            return false;
+        }
+        public List<ComboboxItem> FilterCourseForStudent(string userId)
+        {
+            //course in student's educational program
+            User user = User_BLL.Instance.GetUser(userId);
+            Classroom classroom = Classroom_BLL.Instance.GetClassroomById(user.classId);
+            EducationalProgram educationalProgram =
+                EducationalProgram_BLL.Instance.GetEducationalProgramById(classroom.educationalProgramId);
+            //All Course in Educational Program
+            List<ReturnedCourse> courseInEducationalProgram =
+                EducationalProgram_BLL.Instance.GetAllCourseInEducationalProgram(
+                    educationalProgram.EducationalProgramId);
+            //Check available course
+            List<ReturnedCourse> availableCourses = new List<ReturnedCourse>();
+            foreach (var course in courseInEducationalProgram)
+            {
+                if (course.isAvailable)
+                {
+                    availableCourses.Add(course);
+                }
+            }
+            //Check uncompleted course
+            List<ReturnedCourse> uncompletedCourse = new List<ReturnedCourse>();
+            foreach (var course in availableCourses)
+            {
+                if (checkUncompletedCourse(userId, course.courseId))
+                {
+                    uncompletedCourse.Add(course);
+                }
+            }
+            //Check requirement 
+            List<ReturnedCourse> finalList = new List<ReturnedCourse>();
+            foreach (var course in uncompletedCourse)
+            {
+                if (course.requiremnetId != null)
+                {
+                    if (checkUncompletedCourse(userId, course.requiremnetId) == false)
+                    {
+                        finalList.Add(course);
+                    }
+                }
+                else
+                {
+                    finalList.Add(course);
+                }
+            }
+
+            //Turn data into combobox
+            List<ComboboxItem> comboboxItems = new List<ComboboxItem>();
+            foreach (var course in finalList)
+            {
+                var item = new ComboboxItem
+                {
+                    Text = course.CourseName,
+                    Value = course.courseId
+                };
+                comboboxItems.Add(item);
+            } 
+            return comboboxItems;
+        }
     }
 }

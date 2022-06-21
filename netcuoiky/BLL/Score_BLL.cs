@@ -72,6 +72,12 @@ namespace netcuoiky.BLL
             }
             return resList;
         }
+
+        public void AddScore(Score score)
+        {
+            _context.Score.Add(score);
+            _context.SaveChanges();
+        }
         public void DeleteScore(string userId)
         {
             List<Score> scoreList = _context.Score.Where(score => score.userId == userId).ToList();

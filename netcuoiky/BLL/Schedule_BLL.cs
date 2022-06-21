@@ -60,5 +60,43 @@ namespace netcuoiky.BLL
             //returnedSchedule.Time = Convert.ToString(schedule.StartPeriod) + "-" + Convert.ToString(schedule.EndPeriod);
             return result;
         }
+
+        public bool CheckConflictSchedule(string userId, string courseClassId)
+        {
+            CourseClassroom findingCourseClassroom = _context.CourseClassroom.Find(courseClassId);
+            List<Schedule> findingSchedules = _context.Schedule
+                .Where(w => w.CourseClassId == findingCourseClassroom.CourseClassId).ToList();
+            List<CourseClassroom> courseClassrooms = new List<CourseClassroom>();
+            List<UserCourseClassroom> userCourseClassrooms = _context.UserCourseClassroom.Where(w => w.UserId == userId).ToList();
+            foreach (var item in userCourseClassrooms)
+            {
+                var courseClassroom = _context.CourseClassroom.Find(item.CourseClassroomId);
+                courseClassrooms.Add(courseClassroom);
+            }
+            List<Schedule> schedules = new List<Schedule>();
+            foreach (var courseClassroom in courseClassrooms)
+            {
+                List<Schedule> tempSchedules =
+                    _context.Schedule.Where(s => s.CourseClassId == courseClassroom.CourseClassId).ToList();
+                schedules.AddRange(tempSchedules);
+            }
+
+            foreach (var item in findingSchedules)
+            {
+                foreach (var schedule in schedules)
+                {
+                    if (item.DateInWeek == schedule.DateInWeek)
+                    {
+                        if ((item.StartPeriod >= schedule.StartPeriod && item.StartPeriod <= schedule.EndPeriod) ||
+                            (item.EndPeriod >= schedule.StartPeriod && item.EndPeriod <= schedule.EndPeriod))
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+
+            return true;
+        }
     }
 }

@@ -19,5 +19,7 @@ namespace netcuoiky.DTO
         public int Semester { get; set; }
         [System.ComponentModel.DisplayName("Học Phần Học Trước")]
         public string requiremnetId { get; set; }
+        [System.ComponentModel.DisplayName("Có thể đăng ký")]
+        public bool isAvailable { get; set; }
     }
 }
