@@ -226,6 +226,7 @@ namespace netcuoiky
                     }
                     accountDataGridView.DataSource = Account_BLL.Instance.RegisterAccounts(registerList);
 
+
                 }
                 else
                 {
@@ -233,6 +234,28 @@ namespace netcuoiky
                         MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void exportButton_Click(object sender, EventArgs e)
+        {
+            ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+            ExcelPackage excel = new ExcelPackage();
+            var workSheet = excel.Workbook.Worksheets.Add("Sheet1");
+            int index = 2;
+            foreach (DataGridViewRow row in accountDataGridView.Rows)
+            {
+                workSheet.Cells[index, 1].Value = row.Cells[0].Value.ToString();
+                workSheet.Cells[index, 2].Value = row.Cells[1].Value.ToString();
+                workSheet.Cells[index, 3].Value = row.Cells[2].Value.ToString();
+                workSheet.Cells[index, 4].Value = row.Cells[3].Value.ToString();
+                index++;
+            }
+            string p_strPath = $"E:\\account{index}.xlsx";
+            FileStream objFileStrm = File.Create(p_strPath);
+            objFileStrm.Close();
+            File.WriteAllBytes(p_strPath, excel.GetAsByteArray());
+            excel.Dispose();
+            MessageBox.Show($"file duoc luu o {p_strPath}");
         }
     }
 }

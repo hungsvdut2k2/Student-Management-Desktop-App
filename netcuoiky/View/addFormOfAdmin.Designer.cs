@@ -30,6 +30,7 @@
         {
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.accountDataGridView = new System.Windows.Forms.DataGridView();
             this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -76,12 +77,12 @@
             this.teacherComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.facultyComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.CourseComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.accountDataGridView = new System.Windows.Forms.DataGridView();
+            this.exportButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2TabControl1
@@ -118,6 +119,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.tabPage1.Controls.Add(this.exportButton);
             this.tabPage1.Controls.Add(this.accountDataGridView);
             this.tabPage1.Controls.Add(this.label19);
             this.tabPage1.Controls.Add(this.label18);
@@ -139,6 +141,16 @@
             this.tabPage1.Size = new System.Drawing.Size(943, 622);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thêm người dùng";
+            // 
+            // accountDataGridView
+            // 
+            this.accountDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.accountDataGridView.Location = new System.Drawing.Point(472, 66);
+            this.accountDataGridView.Name = "accountDataGridView";
+            this.accountDataGridView.RowHeadersWidth = 51;
+            this.accountDataGridView.RowTemplate.Height = 24;
+            this.accountDataGridView.Size = new System.Drawing.Size(415, 363);
+            this.accountDataGridView.TabIndex = 36;
             // 
             // label19
             // 
@@ -835,15 +847,20 @@
             this.CourseComboBox.Size = new System.Drawing.Size(260, 36);
             this.CourseComboBox.TabIndex = 0;
             // 
-            // accountDataGridView
+            // exportButton
             // 
-            this.accountDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.accountDataGridView.Location = new System.Drawing.Point(472, 66);
-            this.accountDataGridView.Name = "accountDataGridView";
-            this.accountDataGridView.RowHeadersWidth = 51;
-            this.accountDataGridView.RowTemplate.Height = 24;
-            this.accountDataGridView.Size = new System.Drawing.Size(415, 363);
-            this.accountDataGridView.TabIndex = 36;
+            this.exportButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.exportButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.exportButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.exportButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.exportButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.exportButton.ForeColor = System.Drawing.Color.White;
+            this.exportButton.Location = new System.Drawing.Point(571, 449);
+            this.exportButton.Name = "exportButton";
+            this.exportButton.Size = new System.Drawing.Size(180, 32);
+            this.exportButton.TabIndex = 37;
+            this.exportButton.Text = "Xuất Ra File Excel";
+            this.exportButton.Click += new System.EventHandler(this.exportButton_Click);
             // 
             // addFormOfAdmin
             // 
@@ -860,11 +877,11 @@
             this.guna2TabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.accountDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -919,5 +936,6 @@
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.DataGridView accountDataGridView;
+        private Guna.UI2.WinForms.Guna2Button exportButton;
     }
 }
