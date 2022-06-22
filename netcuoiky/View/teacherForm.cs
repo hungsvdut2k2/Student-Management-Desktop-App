@@ -31,17 +31,8 @@ namespace netcuoiky.View
             Faculty faculty = Faculty_BLL.Instance.GetFacultyById(classroom.facultyId);
             nameTextBox.Text = user.name;
             nationTextbox.Text = user.nation;
-            //genderComboBox.Items.Add("Nam");
-            //genderComboBox.Items.Add("Nữ");
-            if (user.gender)
-            {
-                genderComboBox.Items.Add("Nam");
-            }
-            else
-            {
-                genderComboBox.Items.Add("Nữ");
-            }
-
+            genderCombobox1.Items.Add("Nam");
+            genderCombobox1.Items.Add("Nữ");
             dobTextBox.Text = user.dob;
             birthPlaceTextBox.Text = user.birthPlace;
             personalIdTextBox.Text = user.personalId;
@@ -75,7 +66,7 @@ namespace netcuoiky.View
         {
             bool temp;
             string userId = loginForm.instance.userId;
-            if (genderComboBox.SelectedIndex == 0)
+            if (genderCombobox1.SelectedIndex == 0)
             {
                 temp = true;
             }

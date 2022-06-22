@@ -43,7 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.phoneNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.userIdTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.medicalCodeTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.personalTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -64,6 +63,7 @@
             this.facultyTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.genderComboBox1 = new System.Windows.Forms.ComboBox();
             this.nationTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -133,17 +133,6 @@
             this.label9.Size = new System.Drawing.Size(41, 20);
             this.label9.TabIndex = 40;
             this.label9.Text = "SDT";
-            // 
-            // genderComboBox
-            // 
-            this.genderComboBox.FormattingEnabled = true;
-            this.genderComboBox.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.genderComboBox.Location = new System.Drawing.Point(517, 35);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(67, 21);
-            this.genderComboBox.TabIndex = 36;
             // 
             // userIdTextBox
             // 
@@ -458,6 +447,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.tabPage1.Controls.Add(this.genderComboBox1);
             this.tabPage1.Controls.Add(this.nationTextbox);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.emailTextBox);
@@ -471,7 +461,6 @@
             this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Controls.Add(this.nameTextBox);
             this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.genderComboBox);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.userIdTextBox);
             this.tabPage1.Controls.Add(this.phoneNumberTextBox);
@@ -491,6 +480,14 @@
             this.tabPage1.Size = new System.Drawing.Size(772, 505);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin cá nhân";
+            // 
+            // genderComboBox1
+            // 
+            this.genderComboBox1.FormattingEnabled = true;
+            this.genderComboBox1.Location = new System.Drawing.Point(517, 35);
+            this.genderComboBox1.Name = "genderComboBox1";
+            this.genderComboBox1.Size = new System.Drawing.Size(77, 21);
+            this.genderComboBox1.TabIndex = 81;
             // 
             // nationTextbox
             // 
@@ -936,7 +933,7 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.courseClassDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.courseClassDataGridView.ColumnHeadersHeight = 4;
+            this.courseClassDataGridView.ColumnHeadersHeight = 40;
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -968,7 +965,7 @@
             this.courseClassDataGridView.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.courseClassDataGridView.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.courseClassDataGridView.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.courseClassDataGridView.ThemeStyle.HeaderStyle.Height = 4;
+            this.courseClassDataGridView.ThemeStyle.HeaderStyle.Height = 40;
             this.courseClassDataGridView.ThemeStyle.ReadOnly = false;
             this.courseClassDataGridView.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.courseClassDataGridView.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -1031,7 +1028,6 @@
 
         private Guna.UI2.WinForms.Guna2TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox genderComboBox;
         private Guna.UI2.WinForms.Guna2TextBox userIdTextBox;
         private Guna.UI2.WinForms.Guna2TextBox medicalCodeTextBox;
         private Guna.UI2.WinForms.Guna2TextBox personalTextBox;
@@ -1082,5 +1078,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView courseClassDataGridView;
         private Guna.UI2.WinForms.Guna2ComboBox courseComboBox;
         private Guna.UI2.WinForms.Guna2TextBox nationTextbox;
+        private System.Windows.Forms.ComboBox genderComboBox1;
     }
 }

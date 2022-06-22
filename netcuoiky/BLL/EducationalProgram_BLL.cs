@@ -107,6 +107,13 @@ namespace netcuoiky.BLL
             EducationalProgram educationalProgram = _context.EducationalProgram.Find(educationProgramId);
             return educationalProgram;
         }
-
+        public List<ReturnedCourse> SortListCourse(List<ReturnedCourse> courses)
+        {
+            return courses.OrderBy(o => o.Semester).ToList();
+        }
+        public List<ReturnedCourse> SortListCourseDesc(List<ReturnedCourse> courses)
+        {
+            return courses.OrderByDescending(o => o.Semester).ToList();
+        }
     }
 }

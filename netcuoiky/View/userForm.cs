@@ -34,8 +34,8 @@ namespace netcuoiky
         }
         private void SetComboBox()
         {
-            genderComboBox.Items.Add("Nam");
-            genderComboBox.Items.Add("Nữ");
+            genderComboBox1.Items.Add("Nam");
+            genderComboBox1.Items.Add("Nữ");
         }
         private void SetInformation()
         {
@@ -48,11 +48,11 @@ namespace netcuoiky
             emailTextBox.Text = user.email;
             if (user.gender)
             {
-                genderComboBox.SelectedIndex = 0;
+                genderComboBox1.SelectedIndex = 0;
             }
             else
             {
-                genderComboBox.SelectedIndex = 1;
+                genderComboBox1.SelectedIndex = 1;
             }
             nationTextbox.Text = user.nation;
             personalTextBox.Text = user.personalId;
@@ -111,7 +111,7 @@ namespace netcuoiky
         {
             bool temp;
             string userId = loginForm.instance.userId;
-            if (genderComboBox.SelectedIndex == 0)
+            if (genderComboBox1.SelectedIndex == 0)
             {
                 temp = true;
             }

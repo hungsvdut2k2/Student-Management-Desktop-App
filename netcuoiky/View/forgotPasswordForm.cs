@@ -27,32 +27,32 @@ namespace netcuoiky.View
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            //string email = emailTextBox.Text;
-            //if (User_BLL.Instance.checkValidMail(email))
-            //{
-            //    Random random = new Random();
-            //    code = random.Next(123123, 999999);
-            //    EmailAccount emailAccount = new EmailAccount();
-            //    string p = emailAccount.Password;
-            //    MailMessage message = new MailMessage();
-            //    message.From = new MailAddress(emailAccount.Email);
-            //    message.To.Add(new MailAddress(email));
-            //    message.Subject = "change password";
-            //    message.Body = "Write this given code on text box\n" + code + "\nThank you!";
-            //    using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
-            //    {
-            //        smtp.Credentials = new NetworkCredential("viethungnguyen2002@gmail.com", p);
-            //        smtp.EnableSsl = true;
-            //        smtp.Send(message);
-            //    }
+            string email = emailTextBox.Text;
+            if (User_BLL.Instance.checkValidMail(email))
+            {
+                Random random = new Random();
+                code = random.Next(123123, 999999);
+                EmailAccount emailAccount = new EmailAccount();
+                string p = emailAccount.Password;
+                MailMessage message = new MailMessage();
+                message.From = new MailAddress(emailAccount.Email);
+                message.To.Add(new MailAddress(email));
+                message.Subject = "change password";
+                message.Body = "Write this given code on text box\n" + code + "\nThank you!";
+                using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                {
+                    smtp.Credentials = new NetworkCredential("viethungnguyen2002@gmail.com", p);
+                    smtp.EnableSsl = true;
+                    smtp.Send(message);
+                }
 
-            //    codeTextBox.Enabled = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Vui Lòng Nhập Lại Email !!!");
-            //    emailTextBox.Clear();
-            //}
+                codeTextBox.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Vui Lòng Nhập Lại Email !!!");
+                emailTextBox.Clear();
+            }
         }
 
         private void guna2Button3_Click(object sender, EventArgs e)
@@ -82,7 +82,6 @@ namespace netcuoiky.View
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new loginForm().ShowDialog();
         }
     }
 }
