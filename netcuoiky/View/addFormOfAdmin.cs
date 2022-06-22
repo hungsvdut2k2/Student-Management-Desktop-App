@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using netcuoiky.BLL;
 using netcuoiky.DTO;
+using OfficeOpenXml;
 
 namespace netcuoiky
 {
@@ -21,6 +23,7 @@ namespace netcuoiky
             SetTab2ComboBox();
             SetTab3ComboBox();
         }
+
         public void SetTab1ComboBox()
         {
             roleCombobox.Items.Add("Admin");
@@ -28,6 +31,7 @@ namespace netcuoiky
             roleCombobox.Items.Add("Student");
             facultyComboBox2.Items.AddRange(Faculty_BLL.Instance.GetComboBoxItems().ToArray());
         }
+
         private void SetTab3ComboBox()
         {
             CourseComboBox.Items.AddRange(Course_BLL.Instance.GetAllCourse().ToArray());
@@ -120,7 +124,8 @@ namespace netcuoiky
             string userId = userNameTextBox.Text;
             string facultyId = Faculty_BLL.Instance.GetAllFaculties()[facultyComboBox2.SelectedIndex + 1].facultyId;
             int seletectedIndex = classroomComboBox.SelectedIndex;
-            string classroomId = Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex].Value);
+            string classroomId =
+                Convert.ToString(Classroom_BLL.Instance.GetClassByFaculty(facultyId)[seletectedIndex].Value);
             Account_BLL.Instance.Register(username, password, role, userId, classroomId);
             MessageBox.Show("Dang Ky Thanh Cong");
             this.Dispose();
@@ -187,6 +192,47 @@ namespace netcuoiky
         {
             new adminForm().ShowDialog();
             this.Close();
+        }
+
+        private void browseFileButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                string filePath = file.FileName;
+                string fileExt = Path.GetExtension(file.FileName);
+                if (fileExt.CompareTo(".xls") == 0 || fileExt.CompareTo(".xlsx") == 0)
+                {
+                    ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial;
+                    FileInfo fileInfo = new FileInfo(filePath);
+                    ExcelPackage package = new ExcelPackage(fileInfo);
+                    ExcelWorksheet worksheet = package.Workbook.Worksheets[0];
+                    int rows = worksheet.Dimension.Rows;
+                    List<RegisterDto> registerList = new List<RegisterDto>();
+                    for (int i = 2; i <= rows; i++)
+                    {
+                        RegisterDto request = new RegisterDto
+                        {
+                            className = worksheet.Cells[i, 1].Text,
+                            userId = worksheet.Cells[i, 2].Text,
+                            studentName = worksheet.Cells[i, 3].Text,
+                            Gender = worksheet.Cells[i, 4].Text != "Nữ",
+                            Dob = worksheet.Cells[i, 5].Text,
+                            Email = worksheet.Cells[i, 6].Text,
+                            phoneNumber = worksheet.Cells[i, 7].Text,
+                            Role = "Student"
+                        };
+                        registerList.Add(request);
+                    }
+                    accountDataGridView.DataSource = Account_BLL.Instance.RegisterAccounts(registerList);
+
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng chỉ chọn file có đuôi .xls hoặc .xlsx", "Warning", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
