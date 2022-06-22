@@ -43,7 +43,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.phoneNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.nationComboBox = new System.Windows.Forms.ComboBox();
             this.genderComboBox = new System.Windows.Forms.ComboBox();
             this.userIdTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.medicalCodeTextBox = new Guna.UI2.WinForms.Guna2TextBox();
@@ -65,6 +64,7 @@
             this.facultyTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TabControl1 = new Guna.UI2.WinForms.Guna2TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.nationTextbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.emailTextBox = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -104,6 +104,7 @@
             // 
             // phoneNumberTextBox
             // 
+            this.phoneNumberTextBox.BorderColor = System.Drawing.Color.Black;
             this.phoneNumberTextBox.BorderRadius = 15;
             this.phoneNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.phoneNumberTextBox.DefaultText = "";
@@ -112,7 +113,7 @@
             this.phoneNumberTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneNumberTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.phoneNumberTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.phoneNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.phoneNumberTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.phoneNumberTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.phoneNumberTextBox.Location = new System.Drawing.Point(169, 245);
             this.phoneNumberTextBox.Name = "phoneNumberTextBox";
@@ -133,29 +134,20 @@
             this.label9.TabIndex = 40;
             this.label9.Text = "SDT";
             // 
-            // nationComboBox
-            // 
-            this.nationComboBox.Enabled = false;
-            this.nationComboBox.FormattingEnabled = true;
-            this.nationComboBox.Location = new System.Drawing.Point(651, 36);
-            this.nationComboBox.Name = "nationComboBox";
-            this.nationComboBox.Size = new System.Drawing.Size(67, 21);
-            this.nationComboBox.TabIndex = 37;
-            // 
             // genderComboBox
             // 
-            this.genderComboBox.Enabled = false;
             this.genderComboBox.FormattingEnabled = true;
             this.genderComboBox.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.genderComboBox.Location = new System.Drawing.Point(498, 41);
+            this.genderComboBox.Location = new System.Drawing.Point(517, 35);
             this.genderComboBox.Name = "genderComboBox";
             this.genderComboBox.Size = new System.Drawing.Size(67, 21);
             this.genderComboBox.TabIndex = 36;
             // 
             // userIdTextBox
             // 
+            this.userIdTextBox.BorderColor = System.Drawing.Color.Black;
             this.userIdTextBox.BorderRadius = 15;
             this.userIdTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.userIdTextBox.DefaultText = "";
@@ -164,9 +156,9 @@
             this.userIdTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.userIdTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.userIdTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userIdTextBox.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.userIdTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userIdTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.userIdTextBox.Location = new System.Drawing.Point(456, 245);
+            this.userIdTextBox.Location = new System.Drawing.Point(457, 309);
             this.userIdTextBox.Name = "userIdTextBox";
             this.userIdTextBox.PasswordChar = '\0';
             this.userIdTextBox.PlaceholderText = "";
@@ -176,6 +168,7 @@
             // 
             // medicalCodeTextBox
             // 
+            this.medicalCodeTextBox.BorderColor = System.Drawing.Color.Black;
             this.medicalCodeTextBox.BorderRadius = 15;
             this.medicalCodeTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.medicalCodeTextBox.DefaultText = "";
@@ -184,7 +177,7 @@
             this.medicalCodeTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.medicalCodeTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.medicalCodeTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.medicalCodeTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.medicalCodeTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.medicalCodeTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.medicalCodeTextBox.Location = new System.Drawing.Point(169, 375);
             this.medicalCodeTextBox.Name = "medicalCodeTextBox";
@@ -196,6 +189,7 @@
             // 
             // personalTextBox
             // 
+            this.personalTextBox.BorderColor = System.Drawing.Color.Black;
             this.personalTextBox.BorderRadius = 15;
             this.personalTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.personalTextBox.DefaultText = "";
@@ -204,7 +198,7 @@
             this.personalTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.personalTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.personalTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.personalTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.personalTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.personalTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.personalTextBox.Location = new System.Drawing.Point(238, 183);
             this.personalTextBox.Name = "personalTextBox";
@@ -216,6 +210,7 @@
             // 
             // birthPlaceTextBox
             // 
+            this.birthPlaceTextBox.BorderColor = System.Drawing.Color.Black;
             this.birthPlaceTextBox.BorderRadius = 15;
             this.birthPlaceTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.birthPlaceTextBox.DefaultText = "";
@@ -224,9 +219,9 @@
             this.birthPlaceTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.birthPlaceTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.birthPlaceTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.birthPlaceTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.birthPlaceTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthPlaceTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.birthPlaceTextBox.Location = new System.Drawing.Point(508, 102);
+            this.birthPlaceTextBox.Location = new System.Drawing.Point(517, 183);
             this.birthPlaceTextBox.Name = "birthPlaceTextBox";
             this.birthPlaceTextBox.PasswordChar = '\0';
             this.birthPlaceTextBox.PlaceholderText = "";
@@ -236,6 +231,7 @@
             // 
             // dobTextBox
             // 
+            this.dobTextBox.BorderColor = System.Drawing.Color.Black;
             this.dobTextBox.BorderRadius = 15;
             this.dobTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.dobTextBox.DefaultText = "";
@@ -244,7 +240,7 @@
             this.dobTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.dobTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.dobTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.dobTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dobTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.dobTextBox.Location = new System.Drawing.Point(238, 103);
             this.dobTextBox.Name = "dobTextBox";
@@ -259,7 +255,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(422, 37);
+            this.label8.Location = new System.Drawing.Point(434, 37);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 20);
             this.label8.TabIndex = 30;
@@ -270,7 +266,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(422, 113);
+            this.label6.Location = new System.Drawing.Point(434, 194);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 20);
             this.label6.TabIndex = 28;
@@ -303,7 +299,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(580, 36);
+            this.label3.Location = new System.Drawing.Point(434, 114);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 25;
@@ -331,7 +327,7 @@
             this.nameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.nameTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.nameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.nameTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameTextBox.ForeColor = System.Drawing.Color.Black;
             this.nameTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.nameTextBox.Location = new System.Drawing.Point(238, 25);
@@ -356,15 +352,16 @@
             // userPictureBox
             // 
             this.userPictureBox.ImageRotate = 0F;
-            this.userPictureBox.Location = new System.Drawing.Point(17, 21);
+            this.userPictureBox.Location = new System.Drawing.Point(6, 6);
             this.userPictureBox.Name = "userPictureBox";
-            this.userPictureBox.Size = new System.Drawing.Size(132, 193);
+            this.userPictureBox.Size = new System.Drawing.Size(139, 208);
             this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.userPictureBox.TabIndex = 21;
             this.userPictureBox.TabStop = false;
             // 
             // classTextBox
             // 
+            this.classTextBox.BorderColor = System.Drawing.Color.Black;
             this.classTextBox.BorderRadius = 15;
             this.classTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.classTextBox.DefaultText = "";
@@ -373,7 +370,7 @@
             this.classTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.classTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.classTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.classTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.classTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.classTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.classTextBox.Location = new System.Drawing.Point(169, 309);
             this.classTextBox.Name = "classTextBox";
@@ -399,7 +396,7 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(381, 319);
+            this.label11.Location = new System.Drawing.Point(382, 383);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(46, 20);
             this.label11.TabIndex = 45;
@@ -407,6 +404,7 @@
             // 
             // facultyTextBox
             // 
+            this.facultyTextBox.BorderColor = System.Drawing.Color.Black;
             this.facultyTextBox.BorderRadius = 15;
             this.facultyTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.facultyTextBox.DefaultText = "";
@@ -415,9 +413,9 @@
             this.facultyTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.facultyTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.facultyTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.facultyTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.facultyTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.facultyTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.facultyTextBox.Location = new System.Drawing.Point(456, 309);
+            this.facultyTextBox.Location = new System.Drawing.Point(457, 373);
             this.facultyTextBox.Name = "facultyTextBox";
             this.facultyTextBox.PasswordChar = '\0';
             this.facultyTextBox.PlaceholderText = "";
@@ -460,6 +458,7 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(86)))), ((int)(((byte)(106)))));
+            this.tabPage1.Controls.Add(this.nationTextbox);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.emailTextBox);
             this.tabPage1.Controls.Add(this.guna2Button2);
@@ -477,7 +476,6 @@
             this.tabPage1.Controls.Add(this.userIdTextBox);
             this.tabPage1.Controls.Add(this.phoneNumberTextBox);
             this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.nationComboBox);
             this.tabPage1.Controls.Add(this.label9);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.dobTextBox);
@@ -489,17 +487,39 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Location = new System.Drawing.Point(184, 4);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(772, 505);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Thông tin cá nhân";
+            // 
+            // nationTextbox
+            // 
+            this.nationTextbox.BorderColor = System.Drawing.Color.Black;
+            this.nationTextbox.BorderRadius = 15;
+            this.nationTextbox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.nationTextbox.DefaultText = "";
+            this.nationTextbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.nationTextbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.nationTextbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nationTextbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.nationTextbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nationTextbox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nationTextbox.ForeColor = System.Drawing.Color.Black;
+            this.nationTextbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.nationTextbox.Location = new System.Drawing.Point(517, 103);
+            this.nationTextbox.Name = "nationTextbox";
+            this.nationTextbox.PasswordChar = '\0';
+            this.nationTextbox.PlaceholderText = "";
+            this.nationTextbox.SelectedText = "";
+            this.nationTextbox.Size = new System.Drawing.Size(169, 31);
+            this.nationTextbox.TabIndex = 80;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(430, 182);
+            this.label15.Location = new System.Drawing.Point(382, 256);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(48, 20);
             this.label15.TabIndex = 51;
@@ -507,6 +527,7 @@
             // 
             // emailTextBox
             // 
+            this.emailTextBox.BorderColor = System.Drawing.Color.Black;
             this.emailTextBox.BorderRadius = 15;
             this.emailTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.emailTextBox.DefaultText = "";
@@ -515,9 +536,9 @@
             this.emailTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.emailTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.emailTextBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.emailTextBox.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.emailTextBox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.emailTextBox.Location = new System.Drawing.Point(508, 171);
+            this.emailTextBox.Location = new System.Drawing.Point(457, 245);
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.PasswordChar = '\0';
             this.emailTextBox.PlaceholderText = "";
@@ -556,8 +577,8 @@
             this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(166)))), ((int)(((byte)(76)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.Location = new System.Drawing.Point(169, 434);
             this.guna2Button1.Name = "guna2Button1";
@@ -571,7 +592,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(381, 256);
+            this.label7.Location = new System.Drawing.Point(382, 320);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 20);
             this.label7.TabIndex = 29;
@@ -584,7 +605,7 @@
             this.tabPage2.Controls.Add(this.scoreDataGridView);
             this.tabPage2.Location = new System.Drawing.Point(184, 4);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(772, 505);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Kết quả học tập";
@@ -668,7 +689,7 @@
             this.tabPage3.Controls.Add(this.educationalProgramDataGridView);
             this.tabPage3.Location = new System.Drawing.Point(184, 4);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tabPage3.Size = new System.Drawing.Size(772, 505);
             this.tabPage3.TabIndex = 2;
@@ -754,7 +775,7 @@
             this.tabPage4.Controls.Add(this.classroomDataGridView);
             this.tabPage4.Location = new System.Drawing.Point(184, 4);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage4.Size = new System.Drawing.Size(772, 505);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Lớp sinh hoạt";
@@ -840,7 +861,7 @@
             this.tabPage5.Controls.Add(this.courseClassDataGridView);
             this.tabPage5.Controls.Add(this.courseComboBox);
             this.tabPage5.Location = new System.Drawing.Point(184, 4);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(772, 505);
             this.tabPage5.TabIndex = 4;
@@ -849,24 +870,29 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label16.Location = new System.Drawing.Point(19, 50);
+            this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(30, 58);
             this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(83, 20);
+            this.label16.Size = new System.Drawing.Size(90, 19);
             this.label16.TabIndex = 4;
             this.label16.Text = "Học Phần:";
             // 
             // registerButton
             // 
+            this.registerButton.BorderColor = System.Drawing.Color.White;
+            this.registerButton.BorderRadius = 16;
+            this.registerButton.BorderThickness = 2;
             this.registerButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.registerButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.registerButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.registerButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.registerButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.registerButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.registerButton.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.registerButton.ForeColor = System.Drawing.Color.White;
-            this.registerButton.Location = new System.Drawing.Point(655, 251);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.registerButton.Location = new System.Drawing.Point(650, 125);
+            this.registerButton.Margin = new System.Windows.Forms.Padding(2);
             this.registerButton.Name = "registerButton";
             this.registerButton.Size = new System.Drawing.Size(135, 37);
             this.registerButton.TabIndex = 3;
@@ -875,16 +901,20 @@
             // 
             // searchButton
             // 
+            this.searchButton.BorderColor = System.Drawing.Color.White;
+            this.searchButton.BorderRadius = 16;
+            this.searchButton.BorderThickness = 2;
             this.searchButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.searchButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.searchButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.searchButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.searchButton.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
             this.searchButton.Location = new System.Drawing.Point(464, 42);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(135, 28);
+            this.searchButton.Size = new System.Drawing.Size(135, 35);
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Tìm Kiếm";
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
@@ -918,7 +948,7 @@
             this.courseClassDataGridView.EnableHeadersVisualStyles = false;
             this.courseClassDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.courseClassDataGridView.Location = new System.Drawing.Point(34, 125);
-            this.courseClassDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.courseClassDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.courseClassDataGridView.Name = "courseClassDataGridView";
             this.courseClassDataGridView.RowHeadersVisible = false;
             this.courseClassDataGridView.RowHeadersWidth = 51;
@@ -955,11 +985,11 @@
             this.courseComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.courseComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.courseComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.courseComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.courseComboBox.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.courseComboBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.courseComboBox.ItemHeight = 30;
             this.courseComboBox.Location = new System.Drawing.Point(128, 41);
-            this.courseComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.courseComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.courseComboBox.Name = "courseComboBox";
             this.courseComboBox.Size = new System.Drawing.Size(203, 36);
             this.courseComboBox.TabIndex = 0;
@@ -971,7 +1001,9 @@
             this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(960, 509);
             this.Controls.Add(this.guna2TabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "userForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserPage";
             ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.guna2TabControl1.ResumeLayout(false);
@@ -999,7 +1031,6 @@
 
         private Guna.UI2.WinForms.Guna2TextBox phoneNumberTextBox;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox nationComboBox;
         private System.Windows.Forms.ComboBox genderComboBox;
         private Guna.UI2.WinForms.Guna2TextBox userIdTextBox;
         private Guna.UI2.WinForms.Guna2TextBox medicalCodeTextBox;
@@ -1050,5 +1081,6 @@
         private Guna.UI2.WinForms.Guna2Button searchButton;
         private Guna.UI2.WinForms.Guna2DataGridView courseClassDataGridView;
         private Guna.UI2.WinForms.Guna2ComboBox courseComboBox;
+        private Guna.UI2.WinForms.Guna2TextBox nationTextbox;
     }
 }

@@ -84,7 +84,7 @@ namespace netcuoiky
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 15F));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(322, 95);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -100,7 +100,7 @@ namespace netcuoiky
             this.guna2TabControl1.Controls.Add(this.tabPage3);
             this.guna2TabControl1.ItemSize = new System.Drawing.Size(180, 40);
             this.guna2TabControl1.Location = new System.Drawing.Point(-4, -1);
-            this.guna2TabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2TabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2TabControl1.Name = "guna2TabControl1";
             this.guna2TabControl1.SelectedIndex = 0;
             this.guna2TabControl1.Size = new System.Drawing.Size(983, 549);
@@ -137,9 +137,9 @@ namespace netcuoiky
             this.tabPage1.Controls.Add(this.facultyCombobox);
             this.tabPage1.Controls.Add(this.userDataGridView);
             this.tabPage1.Location = new System.Drawing.Point(184, 4);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(795, 541);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sinh Viên";
@@ -155,7 +155,7 @@ namespace netcuoiky
             this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.ForeColor = System.Drawing.Color.Red;
             this.guna2Button2.Location = new System.Drawing.Point(650, 476);
@@ -168,37 +168,41 @@ namespace netcuoiky
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(214, 5);
+            this.label3.Location = new System.Drawing.Point(193, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(111, 20);
+            this.label3.Size = new System.Drawing.Size(119, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Lớp Sinh Hoạt";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(34, 7);
+            this.label2.Location = new System.Drawing.Point(13, 28);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 20);
+            this.label2.Size = new System.Drawing.Size(50, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Khoa";
             // 
             // updateButton
             // 
+            this.updateButton.BorderColor = System.Drawing.Color.White;
+            this.updateButton.BorderRadius = 16;
+            this.updateButton.BorderThickness = 2;
             this.updateButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.updateButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.updateButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.updateButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.updateButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.updateButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton.ForeColor = System.Drawing.Color.White;
             this.updateButton.Location = new System.Drawing.Point(650, 252);
-            this.updateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateButton.Margin = new System.Windows.Forms.Padding(2);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(135, 37);
             this.updateButton.TabIndex = 6;
@@ -207,14 +211,18 @@ namespace netcuoiky
             // 
             // deleteButton
             // 
+            this.deleteButton.BorderColor = System.Drawing.Color.White;
+            this.deleteButton.BorderRadius = 16;
+            this.deleteButton.BorderThickness = 2;
             this.deleteButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.deleteButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.deleteButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.deleteButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.deleteButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.deleteButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton.ForeColor = System.Drawing.Color.White;
             this.deleteButton.Location = new System.Drawing.Point(650, 196);
-            this.deleteButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteButton.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(135, 37);
             this.deleteButton.TabIndex = 5;
@@ -223,14 +231,18 @@ namespace netcuoiky
             // 
             // addButton
             // 
+            this.addButton.BorderColor = System.Drawing.Color.White;
+            this.addButton.BorderRadius = 16;
+            this.addButton.BorderThickness = 2;
             this.addButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.addButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton.ForeColor = System.Drawing.Color.White;
             this.addButton.Location = new System.Drawing.Point(650, 138);
-            this.addButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addButton.Margin = new System.Windows.Forms.Padding(2);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(135, 37);
             this.addButton.TabIndex = 4;
@@ -239,14 +251,18 @@ namespace netcuoiky
             // 
             // searchButton
             // 
+            this.searchButton.BorderColor = System.Drawing.Color.White;
+            this.searchButton.BorderRadius = 16;
+            this.searchButton.BorderThickness = 2;
             this.searchButton.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.searchButton.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.searchButton.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.searchButton.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.searchButton.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton.ForeColor = System.Drawing.Color.White;
-            this.searchButton.Location = new System.Drawing.Point(470, 41);
-            this.searchButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton.Location = new System.Drawing.Point(469, 62);
+            this.searchButton.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(135, 36);
             this.searchButton.TabIndex = 3;
@@ -263,8 +279,8 @@ namespace netcuoiky
             this.classroomCombobox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.classroomCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.classroomCombobox.ItemHeight = 30;
-            this.classroomCombobox.Location = new System.Drawing.Point(218, 41);
-            this.classroomCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.classroomCombobox.Location = new System.Drawing.Point(197, 62);
+            this.classroomCombobox.Margin = new System.Windows.Forms.Padding(2);
             this.classroomCombobox.Name = "classroomCombobox";
             this.classroomCombobox.Size = new System.Drawing.Size(194, 36);
             this.classroomCombobox.TabIndex = 2;
@@ -279,8 +295,8 @@ namespace netcuoiky
             this.facultyCombobox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.facultyCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.facultyCombobox.ItemHeight = 30;
-            this.facultyCombobox.Location = new System.Drawing.Point(38, 41);
-            this.facultyCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.facultyCombobox.Location = new System.Drawing.Point(17, 62);
+            this.facultyCombobox.Margin = new System.Windows.Forms.Padding(2);
             this.facultyCombobox.Name = "facultyCombobox";
             this.facultyCombobox.Size = new System.Drawing.Size(128, 36);
             this.facultyCombobox.TabIndex = 1;
@@ -316,7 +332,7 @@ namespace netcuoiky
             this.userDataGridView.EnableHeadersVisualStyles = false;
             this.userDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.userDataGridView.Location = new System.Drawing.Point(17, 138);
-            this.userDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.userDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.userDataGridView.Name = "userDataGridView";
             this.userDataGridView.RowHeadersVisible = false;
             this.userDataGridView.RowHeadersWidth = 51;
@@ -357,57 +373,69 @@ namespace netcuoiky
             this.tabPage2.Controls.Add(this.educationDataGridView);
             this.tabPage2.Controls.Add(this.educationalProgramCombobox);
             this.tabPage2.Location = new System.Drawing.Point(184, 4);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(795, 541);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Chương Trình Đào Tạo";
             // 
             // updateButton2
             // 
+            this.updateButton2.BorderColor = System.Drawing.Color.White;
+            this.updateButton2.BorderRadius = 16;
+            this.updateButton2.BorderThickness = 2;
             this.updateButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.updateButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.updateButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.updateButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.updateButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.updateButton2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton2.ForeColor = System.Drawing.Color.White;
-            this.updateButton2.Location = new System.Drawing.Point(650, 253);
-            this.updateButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateButton2.Location = new System.Drawing.Point(650, 256);
+            this.updateButton2.Margin = new System.Windows.Forms.Padding(2);
             this.updateButton2.Name = "updateButton2";
-            this.updateButton2.Size = new System.Drawing.Size(135, 32);
+            this.updateButton2.Size = new System.Drawing.Size(135, 36);
             this.updateButton2.TabIndex = 13;
             this.updateButton2.Text = "Cập Nhật";
             this.updateButton2.Click += new System.EventHandler(this.updateButton2_Click);
             // 
             // deleteButton2
             // 
+            this.deleteButton2.BorderColor = System.Drawing.Color.White;
+            this.deleteButton2.BorderRadius = 16;
+            this.deleteButton2.BorderThickness = 2;
             this.deleteButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.deleteButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.deleteButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.deleteButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.deleteButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.deleteButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.deleteButton2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteButton2.ForeColor = System.Drawing.Color.White;
-            this.deleteButton2.Location = new System.Drawing.Point(650, 198);
-            this.deleteButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deleteButton2.Location = new System.Drawing.Point(650, 200);
+            this.deleteButton2.Margin = new System.Windows.Forms.Padding(2);
             this.deleteButton2.Name = "deleteButton2";
-            this.deleteButton2.Size = new System.Drawing.Size(135, 33);
+            this.deleteButton2.Size = new System.Drawing.Size(135, 36);
             this.deleteButton2.TabIndex = 12;
             this.deleteButton2.Text = "Xoá";
             this.deleteButton2.Click += new System.EventHandler(this.deleteButton2_Click_1);
             // 
             // addButton2
             // 
+            this.addButton2.BorderColor = System.Drawing.Color.White;
+            this.addButton2.BorderRadius = 16;
+            this.addButton2.BorderThickness = 2;
             this.addButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.addButton2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton2.ForeColor = System.Drawing.Color.White;
             this.addButton2.Location = new System.Drawing.Point(650, 143);
-            this.addButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addButton2.Margin = new System.Windows.Forms.Padding(2);
             this.addButton2.Name = "addButton2";
-            this.addButton2.Size = new System.Drawing.Size(135, 35);
+            this.addButton2.Size = new System.Drawing.Size(135, 36);
             this.addButton2.TabIndex = 11;
             this.addButton2.Text = "Thêm";
             this.addButton2.Click += new System.EventHandler(this.addButton2_Click);
@@ -415,25 +443,29 @@ namespace netcuoiky
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(13, 27);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(169, 20);
+            this.label1.Size = new System.Drawing.Size(189, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "Chương Trình Đào Tạo";
             // 
             // searchButton2
             // 
+            this.searchButton2.BorderColor = System.Drawing.Color.White;
+            this.searchButton2.BorderRadius = 16;
+            this.searchButton2.BorderThickness = 2;
             this.searchButton2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.searchButton2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.searchButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.searchButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.searchButton2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton2.ForeColor = System.Drawing.Color.White;
             this.searchButton2.Location = new System.Drawing.Point(463, 69);
-            this.searchButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton2.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton2.Name = "searchButton2";
             this.searchButton2.Size = new System.Drawing.Size(135, 36);
             this.searchButton2.TabIndex = 9;
@@ -469,7 +501,7 @@ namespace netcuoiky
             this.educationDataGridView.EnableHeadersVisualStyles = false;
             this.educationDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.educationDataGridView.Location = new System.Drawing.Point(13, 143);
-            this.educationDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.educationDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.educationDataGridView.Name = "educationDataGridView";
             this.educationDataGridView.RowHeadersVisible = false;
             this.educationDataGridView.RowHeadersWidth = 51;
@@ -510,7 +542,7 @@ namespace netcuoiky
             this.educationalProgramCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.educationalProgramCombobox.ItemHeight = 30;
             this.educationalProgramCombobox.Location = new System.Drawing.Point(13, 69);
-            this.educationalProgramCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.educationalProgramCombobox.Margin = new System.Windows.Forms.Padding(2);
             this.educationalProgramCombobox.Name = "educationalProgramCombobox";
             this.educationalProgramCombobox.Size = new System.Drawing.Size(375, 36);
             this.educationalProgramCombobox.TabIndex = 0;
@@ -525,8 +557,9 @@ namespace netcuoiky
             this.tabPage3.Controls.Add(this.courseClassDataGridView);
             this.tabPage3.Controls.Add(this.searchButton3);
             this.tabPage3.Controls.Add(this.courseCombobox);
+            this.tabPage3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPage3.Location = new System.Drawing.Point(184, 4);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(795, 541);
             this.tabPage3.TabIndex = 2;
@@ -535,56 +568,68 @@ namespace netcuoiky
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(14, 12);
+            this.label4.Location = new System.Drawing.Point(14, 28);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 20);
+            this.label4.Size = new System.Drawing.Size(84, 19);
             this.label4.TabIndex = 18;
             this.label4.Text = "Học Phần";
             // 
             // updateButton3
             // 
+            this.updateButton3.BorderColor = System.Drawing.Color.White;
+            this.updateButton3.BorderRadius = 16;
+            this.updateButton3.BorderThickness = 2;
             this.updateButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.updateButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.updateButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.updateButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.updateButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.updateButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.updateButton3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.updateButton3.ForeColor = System.Drawing.Color.White;
-            this.updateButton3.Location = new System.Drawing.Point(632, 251);
-            this.updateButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.updateButton3.Location = new System.Drawing.Point(632, 249);
+            this.updateButton3.Margin = new System.Windows.Forms.Padding(2);
             this.updateButton3.Name = "updateButton3";
-            this.updateButton3.Size = new System.Drawing.Size(135, 42);
+            this.updateButton3.Size = new System.Drawing.Size(135, 36);
             this.updateButton3.TabIndex = 17;
             this.updateButton3.Text = "Cập Nhật";
             // 
             // DeleteButton3
             // 
+            this.DeleteButton3.BorderColor = System.Drawing.Color.White;
+            this.DeleteButton3.BorderRadius = 16;
+            this.DeleteButton3.BorderThickness = 2;
             this.DeleteButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.DeleteButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.DeleteButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.DeleteButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.DeleteButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.DeleteButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.DeleteButton3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DeleteButton3.ForeColor = System.Drawing.Color.White;
-            this.DeleteButton3.Location = new System.Drawing.Point(632, 189);
-            this.DeleteButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DeleteButton3.Location = new System.Drawing.Point(632, 192);
+            this.DeleteButton3.Margin = new System.Windows.Forms.Padding(2);
             this.DeleteButton3.Name = "DeleteButton3";
-            this.DeleteButton3.Size = new System.Drawing.Size(135, 38);
+            this.DeleteButton3.Size = new System.Drawing.Size(135, 36);
             this.DeleteButton3.TabIndex = 16;
             this.DeleteButton3.Text = "Xoá";
             this.DeleteButton3.Click += new System.EventHandler(this.DeleteButton3_Click_1);
             // 
             // addButton3
             // 
+            this.addButton3.BorderColor = System.Drawing.Color.White;
+            this.addButton3.BorderRadius = 16;
+            this.addButton3.BorderThickness = 2;
             this.addButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.addButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.addButton3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.addButton3.ForeColor = System.Drawing.Color.White;
             this.addButton3.Location = new System.Drawing.Point(632, 131);
-            this.addButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.addButton3.Margin = new System.Windows.Forms.Padding(2);
             this.addButton3.Name = "addButton3";
             this.addButton3.Size = new System.Drawing.Size(135, 38);
             this.addButton3.TabIndex = 15;
@@ -602,7 +647,7 @@ namespace netcuoiky
             this.courseClassDataGridView.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -611,7 +656,7 @@ namespace netcuoiky
             this.courseClassDataGridView.ColumnHeadersHeight = 40;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -620,7 +665,7 @@ namespace netcuoiky
             this.courseClassDataGridView.EnableHeadersVisualStyles = false;
             this.courseClassDataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.courseClassDataGridView.Location = new System.Drawing.Point(18, 131);
-            this.courseClassDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.courseClassDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.courseClassDataGridView.Name = "courseClassDataGridView";
             this.courseClassDataGridView.RowHeadersVisible = false;
             this.courseClassDataGridView.RowHeadersWidth = 51;
@@ -652,14 +697,18 @@ namespace netcuoiky
             // 
             // searchButton3
             // 
+            this.searchButton3.BorderColor = System.Drawing.Color.White;
+            this.searchButton3.BorderRadius = 16;
+            this.searchButton3.BorderThickness = 2;
             this.searchButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.searchButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.searchButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.searchButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.searchButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.searchButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(42)))), ((int)(((byte)(57)))));
+            this.searchButton3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchButton3.ForeColor = System.Drawing.Color.White;
-            this.searchButton3.Location = new System.Drawing.Point(463, 46);
-            this.searchButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.searchButton3.Location = new System.Drawing.Point(463, 62);
+            this.searchButton3.Margin = new System.Windows.Forms.Padding(2);
             this.searchButton3.Name = "searchButton3";
             this.searchButton3.Size = new System.Drawing.Size(135, 36);
             this.searchButton3.TabIndex = 13;
@@ -676,8 +725,8 @@ namespace netcuoiky
             this.courseCombobox.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.courseCombobox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.courseCombobox.ItemHeight = 30;
-            this.courseCombobox.Location = new System.Drawing.Point(18, 46);
-            this.courseCombobox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.courseCombobox.Location = new System.Drawing.Point(18, 62);
+            this.courseCombobox.Margin = new System.Windows.Forms.Padding(2);
             this.courseCombobox.Name = "courseCombobox";
             this.courseCombobox.Size = new System.Drawing.Size(318, 36);
             this.courseCombobox.TabIndex = 0;

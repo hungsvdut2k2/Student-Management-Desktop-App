@@ -107,5 +107,6 @@ namespace netcuoiky.BLL
             EducationalProgram educationalProgram = _context.EducationalProgram.Find(educationProgramId);
             return educationalProgram;
         }
+
     }
 }

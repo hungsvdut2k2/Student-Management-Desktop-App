@@ -30,14 +30,16 @@ namespace netcuoiky.View
             Classroom classroom = Classroom_BLL.Instance.GetClassroomById(user.classId);
             Faculty faculty = Faculty_BLL.Instance.GetFacultyById(classroom.facultyId);
             nameTextBox.Text = user.name;
-            nationComboBox.Text = user.nation;
+            nationTextbox.Text = user.nation;
+            //genderComboBox.Items.Add("Nam");
+            //genderComboBox.Items.Add("Nữ");
             if (user.gender)
             {
-                genderComboBox.Text = "Nam";
+                genderComboBox.Items.Add("Nam");
             }
             else
             {
-                genderComboBox.Text = "Nữ";
+                genderComboBox.Items.Add("Nữ");
             }
 
             dobTextBox.Text = user.dob;
@@ -66,21 +68,31 @@ namespace netcuoiky.View
         private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Hide();
-            (new loginForm()).Show();
+            loginForm.instance.Show();
         }
 
         private void updateButton_Click(object sender, EventArgs e)
         {
+            bool temp;
             string userId = loginForm.instance.userId;
+            if (genderComboBox.SelectedIndex == 0)
+            {
+                temp = true;
+            }
+            else
+            {
+                temp = false;
+            }
             User tempUser = new User
             {
                 name = nameTextBox.Text,
+                gender = temp,
                 birthPlace = birthPlaceTextBox.Text,
                 medicalCode = medicalCodeTextBox.Text,
                 dob = dobTextBox.Text,
                 phoneNumber = phoneNumberTextBox.Text,
                 personalId = personalIdTextBox.Text,
-                nation = nationComboBox.Text,
+                nation = nationTextbox.Text,
                 email = emailTextBox.Text
             };
             User_BLL.Instance.UpdateUser(userId, tempUser);

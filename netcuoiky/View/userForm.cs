@@ -36,7 +36,6 @@ namespace netcuoiky
         {
             genderComboBox.Items.Add("Nam");
             genderComboBox.Items.Add("Nữ");
-            nationComboBox.Items.Add("Kinh");
         }
         private void SetInformation()
         {
@@ -55,7 +54,7 @@ namespace netcuoiky
             {
                 genderComboBox.SelectedIndex = 1;
             }
-            nationComboBox.SelectedIndex = 0;
+            nationTextbox.Text = user.nation;
             personalTextBox.Text = user.personalId;
             userIdTextBox.Text = user.userId;
             medicalCodeTextBox.Text = user.medicalCode;
@@ -110,16 +109,26 @@ namespace netcuoiky
         }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            bool temp;
             string userId = loginForm.instance.userId;
+            if (genderComboBox.SelectedIndex == 0)
+            {
+                temp = true;
+            }
+            else
+            {
+                temp = false;
+            }
             User tempUser = new User
             {
                 name = nameTextBox.Text,
+                gender = temp,
                 birthPlace = birthPlaceTextBox.Text,
                 medicalCode = medicalCodeTextBox.Text,
                 dob = dobTextBox.Text,
                 phoneNumber = phoneNumberTextBox.Text,
                 personalId = personalTextBox.Text,
-                nation = nationComboBox.Text,
+                nation = nationTextbox.Text,
                 email = emailTextBox.Text
             };
             User_BLL.Instance.UpdateUser(userId, tempUser);

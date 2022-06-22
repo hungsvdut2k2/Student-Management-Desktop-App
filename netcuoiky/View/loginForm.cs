@@ -33,32 +33,31 @@ namespace netcuoiky
                 if (loginAccount.role == "Admin")
                 {
                     this.Hide();
-                    new adminForm().ShowDialog();
+                    new adminForm().Show();
                 }
                 else if(loginAccount.role == "Student")
                 {
                     userId = loginAccount.userId;
                     this.Hide();
-                    new userForm().ShowDialog();
+                    new userForm().Show();
                 }
                 else
                 {
                     userId = loginAccount.userId;
                     this.Hide();
-                    new View.teacherForm().ShowDialog();
+                    new View.teacherForm().Show();
                 }
             }
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Environment.Exit(Environment.ExitCode);
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             new forgotPasswordForm().ShowDialog();
-            this.Close();
         }
     }
 }

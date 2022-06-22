@@ -110,7 +110,6 @@
     <Compile Include="DTO\User.cs" />
     <Compile Include="DTO\UserCourse.cs" />
     <Compile Include="DTO\UserCourseClassroom.cs" />
-    <Compile Include="EmailAccount.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.cs" />
     <Compile Include="Migrations\202206161205037_addDatabase.designer.cs">
       <DependentUpon>202206161205037_addDatabase.cs</DependentUpon>
