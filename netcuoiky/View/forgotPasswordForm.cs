@@ -82,6 +82,7 @@ namespace netcuoiky.View
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
             this.Hide();
+            new loginForm().ShowDialog();
         }
     }
 }
